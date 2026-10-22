@@ -33,3 +33,13 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+uv.lock
+server-workdir
+
+.env
+*.log
+*.sqlite3*
+config.toml
+__pycache__
+instance

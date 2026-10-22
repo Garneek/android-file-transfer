@@ -1,92 +1,55 @@
 package com.example.file_transfer.network_protocol
 
 import android.util.Log
-import java.io.BufferedReader
-import java.io.BufferedWriter
-import java.io.InputStreamReader
-import java.io.OutputStreamWriter
-import java.io.PrintWriter
+import java.io.BufferedInputStream
+import java.io.BufferedOutputStream
 import java.net.InetAddress
 import java.net.Socket
+import kotlinx.coroutines.*
 
-class TcpClient(listener: OnMessageReceived?) {
-    private var mServerMessage: String? = null
-    private var mMessageListener: OnMessageReceived? = null
-    private var mRun = false
-    private var mBufferOut: PrintWriter? = null
-    private var mBufferIn: BufferedReader? = null
+class TcpClient(hostname: String, port: Int, listener: MessageListener) {
+    companion object {
+        val TAG: String = TcpClient::class.java.getSimpleName()
+    }
+    interface MessageListener {
+        fun messageReceived(message: ByteArray)
+    }
 
+    var clientListener: MessageListener?
+    var running = false
+    var outputStream: BufferedOutputStream? = null
+    var inputStream: BufferedInputStream? = null
 
+    var serverHostname: String? = null
+    var serverPort: Int? = null
 
     init {
-        mMessageListener = listener
+        clientListener = listener
+        serverHostname = hostname
+        serverPort = port
     }
 
-    fun sendMessage(message: String?) {
-        val runnable: Runnable = object : Runnable {
-            override fun run() {
-                if (mBufferOut != null) {
-                    mBufferOut!!.println(message)
-                    mBufferOut!!.flush()
-                }
-            }
-        }
-        val thread = Thread(runnable)
-        thread.start()
-    }
-
-    fun stopClient() {
-        mRun = false
-
-        if (mBufferOut != null) {
-            mBufferOut!!.flush()
-            mBufferOut!!.close()
-        }
-
-        mMessageListener = null
-        mBufferIn = null
-        mBufferOut = null
-        mServerMessage = null
-    }
-
-    fun run() {
-        mRun = true
+    suspend fun runClient() {
+        running = true
 
         try {
-            //here you must put your computer's IP address.
-            val serverAddr = InetAddress.getByName("localhost")
-
-            Log.d("TCP Client", "C: Connecting...")
-
-            //create a socket to make the connection with the server
-            val socket = Socket(serverAddr, 6767)
+            val serverAddr = InetAddress.getByName(serverHostname!!)
+            val socket = Socket(serverAddr, serverPort!!)
 
             try {
-                //sends the message to the server
-
-                mBufferOut =
-                    PrintWriter(BufferedWriter(OutputStreamWriter(socket.getOutputStream())), true)
-
-                //receives the message which the server sends back
-                mBufferIn = BufferedReader(InputStreamReader(socket.getInputStream()))
+                outputStream = BufferedOutputStream(socket.getOutputStream())
+                inputStream = BufferedInputStream(socket.getInputStream())
 
 
-                //in this while the client listens for the messages sent by the server
-                while (mRun) {
-                    mServerMessage = mBufferIn!!.readLine()
-
-                    if (mServerMessage != null && mMessageListener != null) {
-                        //call the method messageReceived from MyActivity class
-                        mMessageListener!!.messageReceived(mServerMessage)
+                while (running) {
+                    inputStream!!.readBytes().let {
+                        clientListener?.messageReceived(it)
                     }
                 }
 
-                Log.d("RESPONSE FROM SERVER", "S: Received Message: '" + mServerMessage + "'")
             } catch (e: Exception) {
                 Log.e("TCP", "S: Error", e)
             } finally {
-                //the socket must be closed. It is not possible to reconnect to this socket
-                // after it is closed, which means a new socket instance has to be created.
                 socket.close()
             }
         } catch (e: Exception) {
@@ -94,11 +57,22 @@ class TcpClient(listener: OnMessageReceived?) {
         }
     }
 
-    interface OnMessageReceived {
-        fun messageReceived(message: String?)
+    suspend fun stopClient() {
+        running = false
+
+        if (outputStream != null) {
+            outputStream!!.flush()
+            outputStream!!.close()
+        }
+
+        clientListener = null
+        inputStream = null
+        outputStream = null
     }
 
-    companion object {
-        val TAG: String = TcpClient::class.java.getSimpleName()
+
+    suspend fun sendMessage(message: ByteArray?) {
+        outputStream?.write(message)
+        outputStream?.flush()
     }
 }
