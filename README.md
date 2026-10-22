@@ -20,7 +20,7 @@ Aplikacja służąca do bezprzewodowego transferu plików przez HTTP. Umożliwia
 - Miniaturki i fragmenty plików przechowywane na dysku w przestrzeni cache aplikacji
 
 ### Ekrany
-Widok główny, lista serwerów. Pozwala na wybranie widoku dostępnych plików serwera oraz dodanie nowego serwera
+Widok główny, lista serwerów. Pozwala na wybranie widoku dostępnych plików serwera oraz dodanie nowego serwera. Pozwala na szybkie wgranie plików z danego katalogu do domyślnego serwera.
 
 ![Main view](resources/mockup/Main%20view.png)
 
