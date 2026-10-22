@@ -20,27 +20,27 @@ Aplikacja służąca do bezprzewodowego transferu plików przez HTTP. Umożliwia
 - Miniaturki i fragmenty plików przechowywane na dysku w przestrzeni cache aplikacji
 
 ### Ekrany
-Widok główny, lista serwerów
+Widok główny, lista serwerów. Pozwala na wybranie widoku dostępnych plików serwera oraz dodanie nowego serwera
 
 ![Main view](resources/mockup/Main%20view.png)
 
-Dodawanie nowego serwera
+Dodawanie nowego serwera. 
 
 ![New server view](resources/mockup/New%20server%20view.png)
 
-Widok serwera
+Widok serwera. Wyświetla pliki dostępne do pobrania i umożliwia przejście do uploadu plików i edycji ustawień
 
 ![Server view](resources/mockup/Server%20view.png)
 
-Widok wgrywania plików
+Widok wgrywania plików. Pozwala dodać pliki do kolejki przegrywania z menu wyboru plików, oraz za pomocą aparatu. 
 
 ![Upload view](resources/mockup/Upload%20view.png)
 
-Ustawienia serwera
+Ustawienia serwera. Zmiana ustawień istniejącego serwera
 
 ![Server settings view](resources/mockup/Server%20settings%20view.png)
 
-Widok transferu
+Widok transferu. Podgląd, pauza i odwołanie transferu
 
 ![Transfer view](resources/mockup/Transfer%20view.png)
 
