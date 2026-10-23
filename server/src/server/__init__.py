@@ -7,8 +7,10 @@ import functools
 import base64
 import json
 
-from flask import Flask, abort, request, g
+from flask import Flask, Response, abort, request
 
+from flask.app import Headers
+from server import common
 import server.database as database
 import server.config as config
 import server.files as files
@@ -16,7 +18,6 @@ import server.db_operations as dbops
 
 # TODO:
 # [ ] - ADD video/audio thumbnails via another endpoint
-# [ ] - make it so server also signs the messaage
 
 logger = logging.getLogger(__name__)
 
@@ -72,7 +73,17 @@ def authenticate(view):
         if signature != digest.decode("utf-8"):
             abort(401)
 
-        return view(**kwargs)
+        ret = Response()
+        resp = view(**kwargs)
+        if type(resp) == str:
+            ret.data = resp.encode("utf-8")
+        elif type(resp) == bytes:
+            ret.data = resp
+        else:
+            return resp
+
+        ret.headers = Headers(common.sign_request(ret.data))
+        return ret
 
     return wrapped_view
 
