@@ -56,6 +56,8 @@ def download_file(file):
 				f.write(bt.content)
 
 def test_upload_file():
+	print("uploading")
+
 	fname = "upload.mp3"
 	# upload test file path
 	path = os.path.join("test", fname)
@@ -71,7 +73,13 @@ def test_upload_file():
 	f = open(path, "rb")
 	for i in range(chunk_n):
 		bt = f.read(chunk_size)
-		hs = base64.urlsafe_b64encode(md5(bt).digest()).decode("utf-8")
+		hs = base64.urlsafe_b64encode(
+			md5(
+				bytearray(bt) + 
+				fname.encode("utf-8") + 
+				str(chunk_size * i).encode("utf-8")
+			).digest()
+		).decode("utf-8")
 
 		chunks.append(
 			{
@@ -90,12 +98,14 @@ def test_upload_file():
 		"chunks": chunks
 	}).encode("utf-8")
 
+	print("r1")
 	# send and assert correct
 	r = requests.post(f"{get_url()}/file", data=body, headers=common.sign_request(body))
 	if r.status_code != 200:
 		print(r.content)
 		return
 
+	print("chunks")
 	# upload file chunk by chunk
 	for c in chunks:
 		hs = c["id"]

@@ -37,7 +37,13 @@ def register_new_file(path):
 	f = open(wdpath, "rb")
 	for i in range(chunk_n):
 		bt = f.read(chunk_size)
-		hs = base64.urlsafe_b64encode(md5(bt).digest()).decode("utf-8")
+		hs = base64.urlsafe_b64encode(
+			md5(
+				bytearray(bt) + 
+				path.encode("utf-8") + 
+				str(chunk_size * i).encode("utf-8")
+			).digest()
+		).decode("utf-8")
 
 		conn.cursor().execute(
 			"""INSERT INTO chunk 
@@ -92,7 +98,13 @@ def try_fill_file(chunk_hash: str, data: bytes) -> int|None:
 		return 404
 
 	fname, offset, _, fid = d
-	hs = base64.urlsafe_b64encode(md5(data).digest()).decode("utf-8")
+	hs = base64.urlsafe_b64encode(
+		md5(
+			bytearray(data) + 
+			fname.encode("utf-8") + 
+			str(offset).encode("utf-8")
+		).digest()
+	).decode("utf-8")
 
 	if hs != chunk_hash:
 		return 400
