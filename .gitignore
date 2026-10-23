@@ -36,6 +36,8 @@ google-services.json
 
 uv.lock
 server-workdir
+scratch
+server/test
 
 .env
 *.log
@@ -43,3 +45,4 @@ server-workdir
 config.toml
 __pycache__
 instance
+

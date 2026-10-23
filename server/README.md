@@ -6,10 +6,10 @@
 
 Every request not marked as such is authenticated by a pre-shared key. 
 There should be up to three additional headers in the HTTP header:
-- `RandomNumber` - Random number used for the message, obligatory for messages with no request/response body
-- `MessageSignature` - H(PSK ⊕ RandomNumber) or H(PSK ⊕ Message body)
+- `RandomString` - Random string used for the message
+- `MessageSignature` - H(PSK + RandomString) or H(PSK + RandomString + Message body)
 
-This is weak to resend attacks. 
+This is weak to replay attacks. 
 The content of the message is unencrypted. 
 The main focus of the authentication is prevention of downloading unwanted files, not ensuring privacy.
 The hashing function should be SHA-512 and the digest should be in url-safe base64 format.
@@ -43,8 +43,9 @@ Gets the JSON list of files that can be downloaded from the server.
 The request can be filtered by a query string value.
 
 QS:
-- `addedAfter` - datetime in `YY-mm-dd hh:MM` format used for synchronisation of data cached by the client
-- `requestThumbnails` - `1` or `0`, for requesting thumbnails. If not selected the field will be empty
+- `addedAfter` - datetime in `YYYY-mm-dd hh:MM` format used for synchronisation of data cached by the client
+- `requestThumbnails` - for requesting thumbnails. If not selected the field will be empty
+- `requestReload` - for requesting the system to search for new local files. 
 
 Request body:
 ```
@@ -56,7 +57,7 @@ Response body:
 	{
 		"name": "some-file.mp3", // file name 
 		"size": 2133345, // size in bytes
-		"chunks-n": 6, // number of chunks the file is split into
+		"chunk-n": 6, // number of chunks the file is split into
 		"chunk-size": 4194304, // size of a chunk in bytes
 		"thumbnail": "dasddfggasfdGVzdA==", // base64 encoding of the image. Can be empty if no thumbnail is present (128x128 in jpeg is 8kb so ~32k characters)
 		"chunks": [
@@ -70,7 +71,6 @@ Response body:
 			},
 			...
 		] 
-		"directory": false, // whether the file is to be decompressed on receiving. Directories are sent as zip files
 	}
 ]
 ```
@@ -90,7 +90,7 @@ Raw byte data
 
 ##### `POST`
 Writes a data chunk to a file.
-The server first checks if the chunk was already written and if the chunk belongs to any file.
+The server first checks if the chunk was already written or if the chunk belongs to any file.
 This request returns an error if the above is true. 
 After receiving the chunk it is hashed and compared to the id, returning an error if it is incorrect.
 
@@ -107,41 +107,25 @@ Adds the information about a file to the server. The file chunks can only be sen
 
 Request body:
 ```
-[
-	{
-		"name": "some-file.mp3", // file name 
-		"size": 2133345, // size in bytes
-		"chunks-n": 6, // number of chunks the file is split into
-		"chunk-size": 4194304, // size of a chunk in bytes
-		"chunks": [
-			{
-				"id": "MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY", // MD5 hash of the chunk, encoded in url safe base64. 
-				"offset": 0, // offset of the chunk in the file
-			},
-			{
-				"id": "NWExMDVlOGI5ZDQwZTEzMjk3ODBkNjJlYTIyNjVkOGE", // MD5 hash of the chunk, encoded in url safe base64. 
-				"offset": 4194304, // offset of the chunk in the file
-			},
-			...
-		] 
-		"directory": false, // whether the file is to be decompressed on receiving. Directories are sent as zip files
-	}
-]
+{
+	"name": "some-file.mp3", // file name 
+	"size": 2133345, // size in bytes
+	"chunk-n": 6, // number of chunks the file is split into
+	"chunk-size": 4194304, // size of a chunk in bytes
+	"chunks": [
+		{
+			"id": "MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY", // MD5 hash of the chunk, encoded in url safe base64. 
+			"offset": 0, // offset of the chunk in the file
+		},
+		{
+			"id": "NWExMDVlOGI5ZDQwZTEzMjk3ODBkNjJlYTIyNjVkOGE", // MD5 hash of the chunk, encoded in url safe base64. 
+			"offset": 4194304, // offset of the chunk in the file
+		},
+		...
+	] 
+}
 ```
 
 Response body:
 ```
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
