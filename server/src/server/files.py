@@ -111,13 +111,15 @@ def try_fill_file(chunk_hash: str, data: bytes) -> int|None:
 		[size, chunk_hash]
 	)
 	conn.commit()
+	
+
 	if conn.execute(
 		"SELECT hash FROM chunk WHERE fid = ? AND is_downloaded = 0",
 		[fid]
 	).fetchone() is None:
 		conn.execute(
-			"UPDATE file SET is_ready = 1, date_ready = ? WHERE id = ?",
-			[common.get_current_date(), fid]
+			"UPDATE file SET is_ready = 1, date_ready = ?, thumbnail = ? WHERE id = ?",
+			[common.get_current_date(), thumbnailer.get_thumbnail(path), fid]
 		)
 		conn.commit()
 
