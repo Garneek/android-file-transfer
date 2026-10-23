@@ -14,7 +14,8 @@ def register_new_file(path):
 	wd = config.get_config()["work_directory"]
 	wdpath = os.path.join(wd, path)
 	size = os.path.getsize(wdpath)
-	chunk_size = config.get_config()["chunk_size"]
+
+	chunk_size = config.get_config()["chunk_size"] if size < 1024**3 else config.get_config()["big_file_chunk_size"]
 	chunk_n = math.ceil(size / chunk_size)
 
 	conn = database.get_conn()
@@ -86,7 +87,7 @@ def get_chunk_bytes(chunk_hash) -> bytes|None:
 	return b
 
 def try_fill_file(chunk_hash: str, data: bytes) -> int|None:
-	d = db_operations.get_chunk_data(chunk_hash)
+	d = db_operations.get_chunk_data(chunk_hash, downloaded=False)
 	if d is None:
 		return 404
 

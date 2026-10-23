@@ -1,6 +1,6 @@
 import json
 
-from server import common
+from server import common, files
 import server.database as db
 
 def get_file_data(dt: None|str, thumbnails: bool):
@@ -47,13 +47,13 @@ def get_file_data(dt: None|str, thumbnails: bool):
 	return data
 
 
-def get_chunk_data(chunk_hash) -> None|tuple[str, int, int, str]:
+def get_chunk_data(chunk_hash, downloaded = True) -> None|tuple[str, int, int, str]:
 	d = db.get_conn().cursor().execute(
 		"""SELECT file.name, chunk.offset, chunk.size, file.id FROM 
 			file INNER JOIN chunk ON file.id = chunk.fid
-			WHERE chunk.hash = ? AND chunk.is_downloaded = 1
+			WHERE chunk.hash = ? AND chunk.is_downloaded = ?
 			""",
-		[chunk_hash]
+		[chunk_hash, int(downloaded)]
 	).fetchone()
 
 	return d
@@ -83,6 +83,7 @@ def add_file_data(data) -> int|None:
 
 		if fid is None:
 			raise RuntimeError("what")
+		fid = fid[0]
 
 		for chunk in chunks:
 			db.get_conn().cursor().execute(
@@ -95,7 +96,12 @@ def add_file_data(data) -> int|None:
 			)
 
 		conn.commit()
+
+		files.reserve_file(name, size)
+
 		return None
 
-	except:
+
+	except Exception as e:
+		# print(e)
 		return 400

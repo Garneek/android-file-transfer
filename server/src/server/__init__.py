@@ -49,6 +49,7 @@ def close_db():
 def authenticate(view):
     @functools.wraps(view)
     def wrapped_view(**kwargs):
+
         global nonces
         body = request.data
         body_size = len(body)
@@ -128,11 +129,11 @@ def create_app():
         else:
             data = request.data
             try:
-
                 result = files.try_fill_file(chunk_hash, data)
                 if result is not None:
                     abort(result)
-            except:
+            except Exception as e:
+                print(e)
                 abort(500)
 
         return ""
@@ -141,12 +142,13 @@ def create_app():
     @authenticate
     def post_file():
         try:
-            data = request.json
+            data = request.get_data()
             result = dbops.add_file_data(data)
             if result is not None:
                 abort(result)
             return ""
-        except:
+        except Exception as e:
+            # print(e)
             abort(500)
 
     return app

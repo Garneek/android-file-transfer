@@ -43,7 +43,8 @@ def default_config():
 		"server_name": "devServer",
 		"server_description": "development server experimental",
 		"accept_pushes": True,
-		"chunk_size": 524288
+		"chunk_size": 524288,
+		"big_file_chunk_size": 8388608,
 	}
 
 def get_config() ->  dict[str, Any]:
