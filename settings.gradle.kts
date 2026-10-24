@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "file-transfer"
+rootProject.name = "osmium"
 include(":app")

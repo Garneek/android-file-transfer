@@ -15,6 +15,9 @@ The main focus of the authentication is prevention of downloading unwanted files
 The hashing function should be SHA-512 and the digest should be in url-safe base64 format.
 The server/client returns an error if the signature doesn't match.
 
+##### Chunk ID
+`MD5(DATA + FILE_NAME + str(OFFSET))`
+
 ### Endpoints
 
 #### `/` (`GET`)

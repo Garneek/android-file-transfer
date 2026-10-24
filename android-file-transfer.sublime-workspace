@@ -1,0 +1,2346 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"config",
+				"config"
+			],
+			[
+				"base",
+				"base64"
+			],
+			[
+				"get",
+				"get_conn"
+			],
+			[
+				"getCo",
+				"get_conn"
+			],
+			[
+				"json",
+				"json_data"
+			],
+			[
+				"get_chunk",
+				"get_chunk_data"
+			],
+			[
+				"path",
+				"Path"
+			],
+			[
+				"datetime",
+				"datetime"
+			],
+			[
+				"chun",
+				"chunk_size"
+			],
+			[
+				"math",
+				"math (import math)"
+			],
+			[
+				"full",
+				"full_path"
+			],
+			[
+				"thumb",
+				"thumbnails"
+			],
+			[
+				"ch",
+				"chunk_size"
+			],
+			[
+				"abort",
+				"abort"
+			],
+			[
+				"werkzeug",
+				"werkzeug"
+			],
+			[
+				"colo",
+				"setColor(rgba)"
+			],
+			[
+				"fun",
+				"function\tfunction"
+			],
+			[
+				"time",
+				"time (import time)"
+			],
+			[
+				"np",
+				"np (import numpy as np)"
+			],
+			[
+				"ups",
+				"ups_eff"
+			],
+			[
+				"charger",
+				"charger_power"
+			],
+			[
+				"charge_",
+				"charge_power"
+			],
+			[
+				"last",
+				"last_data"
+			],
+			[
+				"final",
+				"final_avg"
+			],
+			[
+				"Descr",
+				"DescriptorMatcher_BRUTEFORCE_L1"
+			],
+			[
+				"img",
+				"img_points"
+			],
+			[
+				"marke",
+				"marker_ids"
+			],
+			[
+				"color",
+				"colortex0"
+			],
+			[
+				"quad",
+				"quadrantAvg"
+			],
+			[
+				"quadra",
+				"quadrantStd"
+			],
+			[
+				"quadrant",
+				"quadrantStd"
+			],
+			[
+				"depth",
+				"depthThres"
+			],
+			[
+				"justi",
+				"justify-items"
+			],
+			[
+				"align",
+				"align-content"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
+				"alg",
+				"align-items"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"flex",
+				"flex-direction"
+			],
+			[
+				"alig",
+				"align-items"
+			],
+			[
+				"move",
+				"move_folder"
+			],
+			[
+				"fetc",
+				"fetchall"
+			],
+			[
+				"ge",
+				"get_cursor"
+			],
+			[
+				"exec",
+				"executemany"
+			],
+			[
+				"fetch",
+				"fetchone"
+			],
+			[
+				"remo",
+				"removedirs"
+			],
+			[
+				"process",
+				"process_queue_entry"
+			],
+			[
+				"own",
+				"chown"
+			],
+			[
+				"users",
+				"users"
+			],
+			[
+				"exe",
+				"execute"
+			],
+			[
+				"runtime",
+				"RuntimeError"
+			],
+			[
+				"day",
+				"weekday"
+			],
+			[
+				"pre",
+				"prepare_data"
+			],
+			[
+				"add",
+				"add_compile_options"
+			],
+			[
+				"add_",
+				"add_custom_command"
+			],
+			[
+				"add_com",
+				"add_compile_options"
+			],
+			[
+				"unique",
+				"unique_lock"
+			],
+			[
+				"inc",
+				"inc\t#include \"…\""
+			],
+			[
+				"include",
+				"include_directories"
+			],
+			[
+				"mili",
+				"milliseconds"
+			],
+			[
+				"micro",
+				"microseconds"
+			],
+			[
+				"run",
+				"runtime_duration"
+			],
+			[
+				"mill",
+				"milliseconds"
+			],
+			[
+				"init",
+				"initialization_duration"
+			],
+			[
+				"before",
+				"before_running"
+			],
+			[
+				"Optimize",
+				"OptimizerParams.hpp\""
+			],
+			[
+				"best",
+				"best_solution"
+			],
+			[
+				"THREAD",
+				"N_THREADS_PER_POP"
+			],
+			[
+				"Inval",
+				"invalid_argument"
+			],
+			[
+				"join",
+				"outerjoin_from"
+			],
+			[
+				"ran",
+				"random"
+			],
+			[
+				"scala",
+				"scalars"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"DateTime",
+				"DATETIME"
+			],
+			[
+				"create",
+				"create_tables"
+			],
+			[
+				"api",
+				"api"
+			],
+			[
+				"delete",
+				"delete"
+			],
+			[
+				"Session",
+				"Session"
+			],
+			[
+				"mapped",
+				"mapped_column"
+			],
+			[
+				"price",
+				"price_data"
+			],
+			[
+				"str",
+				"strftime"
+			],
+			[
+				"from",
+				"fromisoformat"
+			],
+			[
+				"some_",
+				"some_command"
+			],
+			[
+				"now",
+				"now_sec"
+			],
+			[
+				"Bytes",
+				"Bytes"
+			],
+			[
+				"direction",
+				"direction_id"
+			],
+			[
+				"trip_head",
+				"trip_headsign"
+			],
+			[
+				"agen",
+				"agency_id"
+			],
+			[
+				"__tab",
+				"__tablename__"
+			],
+			[
+				"data",
+				"database_path"
+			],
+			[
+				"Argument",
+				"ArgumentTypeError"
+			],
+			[
+				"daemon",
+				"daemon_stop"
+			],
+			[
+				"pkg",
+				"pkgname"
+			],
+			[
+				"token",
+				"token_urlsafe"
+			],
+			[
+				"SECRET_",
+				"SECRET_KEY"
+			],
+			[
+				"justif",
+				"justify-self"
+			],
+			[
+				"algi",
+				"align-content"
+			],
+			[
+				"get_runn",
+				"get_running_apps"
+			],
+			[
+				"update_app",
+				"update_app_limits"
+			],
+			[
+				"datet",
+				"datetime"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"siz",
+				"box-sizing"
+			],
+			[
+				"line",
+				"line-height-step"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"border-radius",
+				"border-bottom-left-radius"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"border-rad",
+				"border-top-left-radius"
+			],
+			[
+				"borde",
+				"border"
+			],
+			[
+				"transl",
+				"translateY()"
+			],
+			[
+				"trans",
+				"translateX()"
+			],
+			[
+				"transit",
+				"transition-timing-function"
+			],
+			[
+				"ali",
+				"align-content"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"input",
+				"input-select"
+			],
+			[
+				"jost",
+				"jost-light"
+			],
+			[
+				"get_",
+				"get_db"
+			],
+			[
+				"parse",
+				"parse_app_rule"
+			],
+			[
+				"parse_app",
+				"parse_app_rules"
+			],
+			[
+				"g",
+				"g"
+			],
+			[
+				"ts",
+				"ts1_ts1_m"
+			],
+			[
+				"Zero",
+				"ZeroSpikeDetector"
+			],
+			[
+				"dateti",
+				"datetime"
+			],
+			[
+				"out",
+				"OutlierDetector"
+			],
+			[
+				"kod",
+				"kod_stacji"
+			],
+			[
+				"tmp",
+				"tmp_measurement"
+			],
+			[
+				"current",
+				"current_extension"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"border-rai",
+				"border-top-left-radius"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "package com.plat.osmium.ui\n\nimport androidx.compose.foundation.layout.fillMaxSize\nimport androidx.compose.material3.Scaffold\nimport androidx.compose.runtime.Composable\nimport androidx.compose.ui.Modifier\nimport androidx.compose.material3.Text\n\nimport com.plat.osmium.ui.theme.OsmiumTheme\n\n// @Preview\n@Composable\nfun OsmiumApp() {\n    OsmiumTheme {\n        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->\n            Text( \n                \"Something\"\n            )\n        }\n    }\n\n}\n\n",
+			"file": "app/src/main/java/com/plat/osmium/ui/OsmiumApp.kt",
+			"file_size": 499,
+			"file_write_time": 134372696176716290,
+			"redo_stack":
+			[
+				[
+					186,
+					1,
+					"insert",
+					{
+						"characters": " vc"
+					},
+					"AwAAALcBAAAAAAAAtwEAAAAAAAABAAAAY7YBAAAAAAAAtgEAAAAAAAABAAAAdrUBAAAAAAAAtQEAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAuAEAAAAAAAC4AQAAAAAAAAAAAAAAAPC/"
+				]
+			],
+			"settings":
+			{
+				"buffer_size": 500,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					12,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAKcEAAAAAAAApwQAAAAAAAADAAAALy8g",
+					"AQAAAAAAAAABAAAAsQQAAAAAAACxBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					1,
+					"reindent",
+					null,
+					"AQAAAMUEAAAAAAAAxgQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxQQAAAAAAADFBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					22,
+					1,
+					"insert",
+					{
+						"characters": "Fi"
+					},
+					"AgAAAMYEAAAAAAAAxwQAAAAAAAAAAAAAxwQAAAAAAADIBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxgQAAAAAAADGBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					28,
+					1,
+					"paste",
+					null,
+					"AQAAAMYEAAAAAAAA0QQAAAAAAAACAAAARmk",
+					"AQAAAAAAAAABAAAAxgQAAAAAAADIBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": "    ",
+								"range":
+								{
+									"end":
+									{
+										"character": 1,
+										"line": 30
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 30
+									}
+								}
+							}
+						],
+						"label": "Format on Save"
+					},
+					"AQAAAMUEAAAAAAAAyQQAAAAAAAABAAAACQ",
+					"AQAAAAAAAAABAAAA0QQAAAAAAADRBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					32,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{$0}"
+					},
+					"AQAAANQEAAAAAAAA1gQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1AQAAAAAAADUBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					33,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+					},
+					"BAAAANUEAAAAAAAA2gQAAAAAAAAAAAAA2gQAAAAAAADfBAAAAAAAAAAAAADWBAAAAAAAANYEAAAAAAAABAAAACAgICDWBAAAAAAAANsEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1QQAAAAAAADVBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": " ",
+								"range":
+								{
+									"end":
+									{
+										"character": 15,
+										"line": 30
+									},
+									"start":
+									{
+										"character": 15,
+										"line": 30
+									}
+								}
+							},
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 5,
+										"line": 31
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 31
+									}
+								}
+							}
+						],
+						"label": "Format on Save"
+					},
+					"AgAAANYEAAAAAAAA1gQAAAAAAAAFAAAAICAgIAnUBAAAAAAAANUEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2wQAAAAAAADbBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					37,
+					1,
+					"reindent",
+					null,
+					"AQAAANcEAAAAAAAA3AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1wQAAAAAAADXBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					38,
+					1,
+					"insert",
+					{
+						"characters": "Text"
+					},
+					"BAAAANwEAAAAAAAA3QQAAAAAAAAAAAAA3QQAAAAAAADeBAAAAAAAAAAAAADeBAAAAAAAAN8EAAAAAAAAAAAAAN8EAAAAAAAA4AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3AQAAAAAAADcBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					39,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAANwEAAAAAAAA3AQAAAAAAAAEAAAAVGV4dA",
+					"AQAAAAAAAAABAAAA4AQAAAAAAADgBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					41,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 5,
+										"line": 31
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 31
+									}
+								}
+							}
+						],
+						"label": "Format on Save"
+					},
+					"AQAAANcEAAAAAAAA1wQAAAAAAAAFAAAAICAgIAk",
+					"AQAAAAAAAAABAAAA3AQAAAAAAADcBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					44,
+					1,
+					"paste",
+					null,
+					"AQAAANcEAAAAAAAA1gUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1wQAAAAAAADXBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					46,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 16,
+										"line": 31
+									},
+									"start":
+									{
+										"character": 8,
+										"line": 31
+									}
+								}
+							},
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 20,
+										"line": 32
+									},
+									"start":
+									{
+										"character": 12,
+										"line": 32
+									}
+								}
+							},
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 24,
+										"line": 33
+									},
+									"start":
+									{
+										"character": 16,
+										"line": 33
+									}
+								}
+							},
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 24,
+										"line": 34
+									},
+									"start":
+									{
+										"character": 16,
+										"line": 34
+									}
+								}
+							},
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 20,
+										"line": 35
+									},
+									"start":
+									{
+										"character": 12,
+										"line": 35
+									}
+								}
+							},
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 16,
+										"line": 36
+									},
+									"start":
+									{
+										"character": 8,
+										"line": 36
+									}
+								}
+							}
+						],
+						"label": "Format on Save"
+					},
+					"BgAAAM0FAAAAAAAAzQUAAAAAAAAIAAAAICAgICAgICC7BQAAAAAAALsFAAAAAAAACAAAACAgICAgICAgfQUAAAAAAAB9BQAAAAAAAAgAAAAgICAgICAgIFMFAAAAAAAAUwUAAAAAAAAIAAAAICAgICAgICAxBQAAAAAAADEFAAAAAAAACAAAACAgICAgICAg3wQAAAAAAADfBAAAAAAAAAgAAAAgICAgICAgIA",
+					"AQAAAAAAAAABAAAA1gUAAAAAAADWBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					51,
+					1,
+					"left_delete",
+					null,
+					"AQAAAOYEAAAAAAAA5gQAAAAAAAABAAAAZA",
+					"AQAAAAAAAAABAAAA5wQAAAAAAADnBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					52,
+					1,
+					"insert",
+					{
+						"characters": "d"
+					},
+					"AQAAAOYEAAAAAAAA5wQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5gQAAAAAAADmBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					55,
+					3,
+					"left_delete",
+					null,
+					"AwAAAB0AAAAAAAAAHQAAAAAAAAB8BAAAaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuYW5pbWF0aW9uLkFuaW1hdGVkVmlzaWJpbGl0eVNjb3BlCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLmFuaW1hdGlvbi5FeHBlcmltZW50YWxTaGFyZWRUcmFuc2l0aW9uQXBpCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLmFuaW1hdGlvbi5TaGFyZWRUcmFuc2l0aW9uTGF5b3V0CmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLmFuaW1hdGlvbi5TaGFyZWRUcmFuc2l0aW9uU2NvcGUKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuYW5pbWF0aW9uLmZhZGVJbgppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5hbmltYXRpb24uZmFkZU91dAppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5hbmltYXRpb24uc2xpZGVJblZlcnRpY2FsbHkKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuYW5pbWF0aW9uLnNsaWRlT3V0VmVydGljYWxseQppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5mb3VuZGF0aW9uLmxheW91dC5jb25zdW1lV2luZG93SW5zZXRzCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLmZvdW5kYXRpb24ubGF5b3V0LnBhZGRpbmcKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuZm91bmRhdGlvbi5sYXlvdXQuc3lzdGVtQmFyc1BhZGRpbmcKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UubWF0ZXJpYWwzLlNuYWNrYmFySG9zdAppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5ydW50aW1lLkNvbXBvc2FibGUKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UucnVudGltZS5Db21wb3NpdGlvbkxvY2FsUHJvdmlkZXIKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UucnVudGltZS5jb21wb3NpdGlvbkxvY2FsT2YKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UucnVudGltZS5nZXRWYWx1ZQppbXBvcnQgYW5kcm9pZHguY29tcG9zZS51aS5Nb2RpZmllcgppbXBvcnQgYW5kcm9pZHguY29tcG9zZS51aS50b29saW5nLnByZXZpZXcuUHJldmlldwppbXBvcnQgYW5kcm9pZHgubmF2aWdhdGlvbi5OYXZCYWNrU3RhY2tFbnRyeQppbXBvcnQgYW5kcm9pZHgubmF2aWdhdGlvbi5OYXZUeXBlCmltcG9ydCBhbmRyb2lkeC5uYXZpZ2F0aW9uLmNvbXBvc2UuTmF2SG9zdAppbXBvcnQgYW5kcm9pZHgubmF2aWdhdGlvbi5jb21wb3NlLmN1cnJlbnRCYWNrU3RhY2tFbnRyeUFzU3RhdGUKaW1wb3J0IGFuZHJvaWR4Lm5hdmlnYXRpb24ubmF2QXJndW1lbnQcAAAAAAAAABwAAAAAAAAAAQAAAAobAAAAAAAAABsAAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAAmQQAAAAAAAAdAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					64,
+					1,
+					"left_delete",
+					null,
+					"AQAAADIBAAAAAAAAMgEAAAAAAACoBwAALy8gICAgIEZpbGV0cmFuc2ZlclRoZW1lIHsKLy8gICAgICAgICB2YWwgamV0c25hY2tOYXZDb250cm9sbGVyID0gcmVtZW1iZXJKZXRzbmFja05hdkNvbnRyb2xsZXIoKQovLyAgICAgICAgIFNoYXJlZFRyYW5zaXRpb25MYXlvdXQgewovLyAgICAgICAgICAgICBDb21wb3NpdGlvbkxvY2FsUHJvdmlkZXIoCi8vICAgICAgICAgICAgICAgICBMb2NhbFNoYXJlZFRyYW5zaXRpb25TY29wZSBwcm92aWRlcyB0aGlzLAovLyAgICAgICAgICAgICApIHsKLy8gICAgICAgICAgICAgICAgIE5hdkhvc3QoCi8vICAgICAgICAgICAgICAgICAgICAgbmF2Q29udHJvbGxlciA9IGpldHNuYWNrTmF2Q29udHJvbGxlci5uYXZDb250cm9sbGVyLAovLyAgICAgICAgICAgICAgICAgICAgIHN0YXJ0RGVzdGluYXRpb24gPSBNYWluRGVzdGluYXRpb25zLkhPTUVfUk9VVEUsCi8vICAgICAgICAgICAgICAgICApIHsKLy8gICAgICAgICAgICAgICAgICAgICBjb21wb3NhYmxlV2l0aENvbXBvc2l0aW9uTG9jYWwoCi8vICAgICAgICAgICAgICAgICAgICAgICAgIHJvdXRlID0gTWFpbkRlc3RpbmF0aW9ucy5IT01FX1JPVVRFLAovLyAgICAgICAgICAgICAgICAgICAgICkgeyBiYWNrU3RhY2tFbnRyeSAtPgovLyAgICAgICAgICAgICAgICAgICAgICAgICBNYWluQ29udGFpbmVyKAovLyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb25TbmFja1NlbGVjdGVkID0gamV0c25hY2tOYXZDb250cm9sbGVyOjpuYXZpZ2F0ZVRvU25hY2tEZXRhaWwsCi8vICAgICAgICAgICAgICAgICAgICAgICAgICkKLy8gICAgICAgICAgICAgICAgICAgICB9CgovLyAgICAgICAgICAgICAgICAgICAgIGNvbXBvc2FibGVXaXRoQ29tcG9zaXRpb25Mb2NhbCgKLy8gICAgICAgICAgICAgICAgICAgICAgICAgIiR7TWFpbkRlc3RpbmF0aW9ucy5TTkFDS19ERVRBSUxfUk9VVEV9LyIgKwovLyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ7JHtNYWluRGVzdGluYXRpb25zLlNOQUNLX0lEX0tFWX19IiArCi8vICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIj9vcmlnaW49eyR7TWFpbkRlc3RpbmF0aW9ucy5PUklHSU59fSIsCi8vICAgICAgICAgICAgICAgICAgICAgICAgIGFyZ3VtZW50cyA9IGxpc3RPZigKLy8gICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hdkFyZ3VtZW50KE1haW5EZXN0aW5hdGlvbnMuU05BQ0tfSURfS0VZKSB7Ci8vICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9IE5hdlR5cGUuTG9uZ1R5cGUKLy8gICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0sCi8vICAgICAgICAgICAgICAgICAgICAgICAgICksCgovLyAgICAgICAgICAgICAgICAgICAgICkgeyBiYWNrU3RhY2tFbnRyeSAtPgovLyAgICAgICAgICAgICAgICAgICAgICAgICB2YWwgYXJndW1lbnRzID0gcmVxdWlyZU5vdE51bGwoYmFja1N0YWNrRW50cnkuYXJndW1lbnRzKQovLyAgICAgICAgICAgICAgICAgICAgICAgICB2YWwgc25hY2tJZCA9IGFyZ3VtZW50cy5nZXRMb25nKE1haW5EZXN0aW5hdGlvbnMuU05BQ0tfSURfS0VZKQovLyAgICAgICAgICAgICAgICAgICAgICAgICB2YWwgb3JpZ2luID0gYXJndW1lbnRzLmdldFN0cmluZyhNYWluRGVzdGluYXRpb25zLk9SSUdJTikKLy8gICAgICAgICAgICAgICAgICAgICAgICAgU25hY2tEZXRhaWwoCi8vICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzbmFja0lkLAovLyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb3JpZ2luID0gb3JpZ2luID86ICIiLAovLyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdXBQcmVzcyA9IGpldHNuYWNrTmF2Q29udHJvbGxlcjo6dXBQcmVzcywKLy8gICAgICAgICAgICAgICAgICAgICAgICAgKQovLyAgICAgICAgICAgICAgICAgICAgIH0KLy8gICAgICAgICAgICAgICAgIH0KLy8gICAgICAgICAgICAgfQovLyAgICAgICAgIH0KLy8gICAgIH0KLy8gfQ",
+					"AQAAAAAAAAABAAAAMgEAAAAAAADaCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					70,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": "import androidx.compose.runtime.Composable",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 2
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 2
+									}
+								}
+							},
+							{
+								"newText": "\n\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 3
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 3
+									}
+								}
+							}
+						],
+						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt"
+					},
+					"AgAAAB0AAAAAAAAAHwAAAAAAAAAAAAAAHAAAAAAAAABGAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKAEAAAAAAAAoAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					73,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": "import com.plat.osmium.ui.theme.OsmiumTheme",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 3
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 3
+									}
+								}
+							},
+							{
+								"newText": "\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 5
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 5
+									}
+								}
+							}
+						],
+						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt"
+					},
+					"AgAAAEkAAAAAAAAASgAAAAAAAAAAAAAARwAAAAAAAAByAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVAEAAAAAAABUAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					75,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": "mate",
+								"range":
+								{
+									"end":
+									{
+										"character": 24,
+										"line": 2
+									},
+									"start":
+									{
+										"character": 24,
+										"line": 2
+									}
+								}
+							},
+							{
+								"newText": "ial3.Scaffold\nimport androidx.compose.r",
+								"range":
+								{
+									"end":
+									{
+										"character": 25,
+										"line": 2
+									},
+									"start":
+									{
+										"character": 25,
+										"line": 2
+									}
+								}
+							}
+						],
+						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt"
+					},
+					"AgAAADUAAAAAAAAAXAAAAAAAAAAAAAAANAAAAAAAAAA4AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgAEAAAAAAACAAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					77,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": "androidx.",
+								"range":
+								{
+									"end":
+									{
+										"character": 7,
+										"line": 4
+									},
+									"start":
+									{
+										"character": 7,
+										"line": 4
+									}
+								}
+							},
+							{
+								"newText": "pose",
+								"range":
+								{
+									"end":
+									{
+										"character": 10,
+										"line": 4
+									},
+									"start":
+									{
+										"character": 10,
+										"line": 4
+									}
+								}
+							},
+							{
+								"newText": "ui.Modifier\nim",
+								"range":
+								{
+									"end":
+									{
+										"character": 11,
+										"line": 4
+									},
+									"start":
+									{
+										"character": 11,
+										"line": 4
+									}
+								}
+							},
+							{
+								"newText": "ort com.p",
+								"range":
+								{
+									"end":
+									{
+										"character": 12,
+										"line": 4
+									},
+									"start":
+									{
+										"character": 12,
+										"line": 4
+									}
+								}
+							}
+						],
+						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt"
+					},
+					"BAAAAH4AAAAAAAAAhwAAAAAAAAAAAAAAfQAAAAAAAACLAAAAAAAAAAAAAAB8AAAAAAAAAIAAAAAAAAAAAAAAAHkAAAAAAAAAggAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqwEAAAAAAACrAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					79,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": "foundation.layout.fillMaxSize\ni",
+								"range":
+								{
+									"end":
+									{
+										"character": 24,
+										"line": 2
+									},
+									"start":
+									{
+										"character": 24,
+										"line": 2
+									}
+								}
+							},
+							{
+								"newText": "port ",
+								"range":
+								{
+									"end":
+									{
+										"character": 25,
+										"line": 2
+									},
+									"start":
+									{
+										"character": 25,
+										"line": 2
+									}
+								}
+							},
+							{
+								"newText": "ndroidx.compose.ma",
+								"range":
+								{
+									"end":
+									{
+										"character": 26,
+										"line": 2
+									},
+									"start":
+									{
+										"character": 26,
+										"line": 2
+									}
+								}
+							}
+						],
+						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt"
+					},
+					"AwAAADYAAAAAAAAASAAAAAAAAAAAAAAANQAAAAAAAAA6AAAAAAAAAAAAAAA0AAAAAAAAAFMAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzwEAAAAAAADPAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					82,
+					1,
+					"swap_line_down",
+					null,
+					"AgAAAPkAAAAAAAAAJQEAAAAAAAAAAAAAzAAAAAAAAADMAAAAAAAAACwAAABpbXBvcnQgY29tLnBsYXQub3NtaXVtLnVpLnRoZW1lLk9zbWl1bVRoZW1lCg",
+					"AQAAAAAAAAABAAAA8wAAAAAAAADzAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					92,
+					1,
+					"insert",
+					{
+						"characters": "\nText"
+					},
+					"BQAAAHsBAAAAAAAAhQEAAAAAAAAAAAAAhQEAAAAAAACGAQAAAAAAAAAAAACGAQAAAAAAAIcBAAAAAAAAAAAAAIcBAAAAAAAAiAEAAAAAAAAAAAAAiAEAAAAAAACJAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAewEAAAAAAAB7AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					93,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAIkBAAAAAAAAiwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiQEAAAAAAACJAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					95,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": "    ",
+								"range":
+								{
+									"end":
+									{
+										"character": 9,
+										"line": 14
+									},
+									"start":
+									{
+										"character": 8,
+										"line": 14
+									}
+								}
+							}
+						],
+						"label": "Format on Save"
+					},
+					"AQAAAIQBAAAAAAAAiAEAAAAAAAABAAAACQ",
+					"AQAAAAAAAAABAAAAigEAAAAAAACKAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AwAAAI0BAAAAAAAAmgEAAAAAAAAAAAAAjgEAAAAAAACOAQAAAAAAAAwAAAAgICAgICAgICAgICCOAQAAAAAAAJsBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjQEAAAAAAACNAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					100,
+					4,
+					"cut",
+					null,
+					"BAAAAJ0BAAAAAAAAnQEAAAAAAAAWAAAAICAgICAgICAgICAgR3JlZXRpbmcoCp0BAAAAAAAAnQEAAAAAAAAiAAAAICAgICAgICAgICAgICAgIG5hbWUgPSAiQW5kcm9pZCIsCp0BAAAAAAAAnQEAAAAAAAA6AAAAICAgICAgICAgICAgICAgIG1vZGlmaWVyID0gTW9kaWZpZXIucGFkZGluZyhpbm5lclBhZGRpbmcpCp0BAAAAAAAAnQEAAAAAAAAOAAAAICAgICAgICAgICAgKQo",
+					"AQAAAAAAAAABAAAArQEAAAAAAACtAQAAAAAAAAAAAAAAAGJA"
+				],
+				[
+					103,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AwAAAI0BAAAAAAAAmgEAAAAAAAAAAAAAjgEAAAAAAACOAQAAAAAAAAwAAAAgICAgICAgICAgICCOAQAAAAAAAJsBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjQEAAAAAAACNAQAAAAAAAAAAAAAAIGNA"
+				],
+				[
+					104,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAJsBAAAAAAAAnQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmwEAAAAAAACbAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					105,
+					1,
+					"insert",
+					{
+						"characters": "S"
+					},
+					"AQAAAJwBAAAAAAAAnQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnAEAAAAAAACcAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					106,
+					1,
+					"left_delete",
+					null,
+					"AQAAAJwBAAAAAAAAnAEAAAAAAAABAAAAUw",
+					"AQAAAAAAAAABAAAAnQEAAAAAAACdAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					107,
+					1,
+					"insert",
+					{
+						"characters": "Something"
+					},
+					"CQAAAJwBAAAAAAAAnQEAAAAAAAAAAAAAnQEAAAAAAACeAQAAAAAAAAAAAACeAQAAAAAAAJ8BAAAAAAAAAAAAAJ8BAAAAAAAAoAEAAAAAAAAAAAAAoAEAAAAAAAChAQAAAAAAAAAAAAChAQAAAAAAAKIBAAAAAAAAAAAAAKIBAAAAAAAAowEAAAAAAAAAAAAAowEAAAAAAACkAQAAAAAAAAAAAACkAQAAAAAAAKUBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnAEAAAAAAACcAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					109,
+					1,
+					"lsp_apply_text_document_edit",
+					{
+						"edits":
+						[
+							{
+								"newText": "    ",
+								"range":
+								{
+									"end":
+									{
+										"character": 13,
+										"line": 15
+									},
+									"start":
+									{
+										"character": 12,
+										"line": 15
+									}
+								}
+							},
+							{
+								"newText": "",
+								"range":
+								{
+									"end":
+									{
+										"character": 13,
+										"line": 16
+									},
+									"start":
+									{
+										"character": 12,
+										"line": 16
+									}
+								}
+							}
+						],
+						"label": "Format on Save"
+					},
+					"AgAAALMBAAAAAAAAswEAAAAAAAABAAAACZoBAAAAAAAAngEAAAAAAAABAAAACQ",
+					"AQAAAAAAAAABAAAApQEAAAAAAAClAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					121,
+					1,
+					"paste",
+					null,
+					"AQAAAFIAAAAAAAAAfQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfAAAAAAAAAB8AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					126,
+					1,
+					"insert",
+					{
+						"characters": "Text"
+					},
+					"BAAAAJ8AAAAAAAAAoAAAAAAAAAAIAAAAU2NhZmZvbGSgAAAAAAAAAKEAAAAAAAAAAAAAAKEAAAAAAAAAogAAAAAAAAAAAAAAogAAAAAAAACjAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnwAAAAAAAACnAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					129,
+					1,
+					"cut",
+					null,
+					"AQAAAH0AAAAAAAAAfQAAAAAAAAAnAAAAaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UubWF0ZXJpYWwzLlRleHQK",
+					"AQAAAAAAAAABAAAAowAAAAAAAACjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					137,
+					1,
+					"",
+					null,
+					"AQAAAMwAAAAAAAAA8gAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzAAAAAAAAADMAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					140,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAPIAAAAAAAAA8wAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8gAAAAAAAADyAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					185,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAALQBAAAAAAAAtQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtAEAAAAAAAC0AQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "app/src/main/java/com/plat/osmium/ui/theme/Theme.kt",
+			"settings":
+			{
+				"buffer_size": 1689,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": "OsmiumThem"
+					},
+					"CgAAABgEAAAAAAAAGQQAAAAAAAARAAAARmlsZXRyYW5zZmVyVGhlbWUZBAAAAAAAABoEAAAAAAAAAAAAABoEAAAAAAAAGwQAAAAAAAAAAAAAGwQAAAAAAAAcBAAAAAAAAAAAAAAcBAAAAAAAAB0EAAAAAAAAAAAAAB0EAAAAAAAAHgQAAAAAAAAAAAAAHgQAAAAAAAAfBAAAAAAAAAAAAAAfBAAAAAAAACAEAAAAAAAAAAAAACAEAAAAAAAAIQQAAAAAAAAAAAAAIQQAAAAAAAAiBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGAQAAAAAAAApBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"insert",
+					{
+						"characters": "e"
+					},
+					"AQAAACIEAAAAAAAAIwQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIgQAAAAAAAAiBAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/Compile to PDF.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/Compile to PDF.sublime-build",
+					"Traditional Builder"
+				],
+				[
+					"Packages/LaTeXTools/Compile to PDF.sublime-build",
+					"Traditional Builder with PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/Compile to PDF.sublime-build",
+					"Traditional Builder with XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/Compile to PDF.sublime-build",
+					"Traditional Builder with LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/Compile to PDF.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/Compile to PDF.sublime-build",
+					"Basic Builder with PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/Compile to PDF.sublime-build",
+					"Basic Builder with XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/Compile to PDF.sublime-build",
+					"Basic Builder with LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/Compile to PDF.sublime-build",
+					"Script Builder"
+				],
+				[
+					"Packages/User/uv_python.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXTools/Compile to PDF.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Automatic"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Run (with args)..."
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Check"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Test"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Test (with args)..."
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Bench"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Document"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Clippy"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Script"
+				]
+			],
+			[
+				"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Rust/Rust.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Build & Run"
+				]
+			],
+			[
+				"Packages/Rust/Rust.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"lsp ",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"package ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"mark pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"markdown ",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git commit ",
+				"Git: Commit"
+			],
+			[
+				"pacakge",
+				"Package Control: Install Package"
+			],
+			[
+				"git rese",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"late ",
+				"LaTeXTools: Show build panel"
+			],
+			[
+				"build ",
+				"Build: New Build System"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"gi co",
+				"Git: Commit"
+			],
+			[
+				"color ",
+				"UI: Select Color Scheme"
+			],
+			[
+				"theme ",
+				"UI: Select Theme"
+			],
+			[
+				"lsp server",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"git ",
+				"Git: Add All"
+			],
+			[
+				"git add ",
+				"Git: Add All"
+			],
+			[
+				"pyright",
+				"LSP-pyright: Create Pyright Configuration File"
+			],
+			[
+				"pull reba",
+				"Git: Pull Using Rebase"
+			],
+			[
+				"git remo",
+				"Git: Track Remote Branch"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"preview",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"markdownPrev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"git ad",
+				"Git: Add All"
+			],
+			[
+				"git puh",
+				"Git: Push"
+			],
+			[
+				"GIT AD",
+				"Git: Add All"
+			],
+			[
+				"git file",
+				"Git: Reset (unstage) Current File"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"latex sett",
+				"Preferences: LaTeXTools Settings"
+			],
+			[
+				"latex",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"latextoo",
+				"Preferences: LaTeXTools Settings"
+			],
+			[
+				"git a",
+				"Git: Add All"
+			],
+			[
+				"git ad\\",
+				"Git: Add All"
+			],
+			[
+				"color",
+				"UI: Customize Color Scheme"
+			],
+			[
+				"lsp re",
+				"LSP: Restart Server"
+			],
+			[
+				"lsp restart",
+				"LSP: Restart Server"
+			],
+			[
+				"lsp resta",
+				"LSP: Restart Server"
+			],
+			[
+				"pyrig",
+				"LSP-pyright: Create Pyright Configuration File"
+			],
+			[
+				"package remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"packageco ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"git re",
+				"Git: Pull Using Rebase"
+			],
+			[
+				"git commi",
+				"Git: Commit"
+			],
+			[
+				"lsp serve",
+				"LSP: Restart Server"
+			],
+			[
+				"lsp trou",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"lsp",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"markdown",
+				"MarkdownEditing: New Inline Image"
+			],
+			[
+				"rust ",
+				"Preferences: Rust Enhanced Settings"
+			],
+			[
+				"git res",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"bar",
+				"View: Toggle Side Bar"
+			],
+			[
+				"panel",
+				"LSP: Toggle Log Panel"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"markdownpre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"git rem",
+				"Git: Track Remote Branch"
+			],
+			[
+				"git init",
+				"Git: Init"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"terminal",
+				"Preferences: Terminal View: Keybindings"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"comme",
+				"Toggle Comment"
+			],
+			[
+				"commen",
+				"Toggle Comment"
+			],
+			[
+				"comment",
+				"Toggle Comment"
+			],
+			[
+				"build",
+				"Build: Cancel"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"packa inst",
+				"Package Control: Install Package"
+			],
+			[
+				"rust",
+				"Build With: Rust - Run"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/res",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/res/values"
+	],
+	"file_history":
+	[
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/AndroidManifest.xml",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/res/values/strings.xml",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/res/values/themes.xml",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/res/values-night/themes.xml",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/MainActivity.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/test/java/com/example/file_transfer/ExampleUnitTest.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/androidTest/java/com/example/file_transfer/ExampleInstrumentedTest.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/build.gradle.kts",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/android-file-transfer.sublime-project",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme/Type.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme/Theme.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/network_protocol/FileSystemManager.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/example/file_transfer/MainActivity.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/example/file_transfer/ui/Osmium.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme/Color.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/example/file_transfer/ui/theme/Theme.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/settings.gradle.kts",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/.gitignore",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/config.toml",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/test/__init__.py",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/__init__.py",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/test/somefile",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/files.py",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/server-workdir/somefile",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/log.log",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/db_operations.py",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/README.md",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/config.py",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/database.py",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/.env",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/thumbnailer.py",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/common.py",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/pyproject.toml",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/.venv/lib/python3.14/site-packages/werkzeug/datastructures/headers.py",
+		"/tmp/pyrefly_bundled_typeshed_8bf9c08e7808/builtins.pyi",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/README.md",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/endpoints.md",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/templates/index.html",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/templates/login.html",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/data.sqlite3",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/run.sh",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/db.py",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server-workdir/somefile",
+		"/home/aaa/Games/balatro_code/main.lua",
+		"/home/aaa/Games/balatro_code/globals.lua",
+		"/home/aaa/Games/balatro_code/game.lua",
+		"/home/aaa/Documents/games/love-thing/src/main.lua",
+		"/home/aaa/Documents/games/love-thing/love-thing.sublime-project",
+		"/home/aaa/Documents/games/love-thing/src/conf.lua",
+		"/home/aaa/Documents/games/love-thing/Makefile",
+		"/home/aaa/Documents/games/love-thing/main.lua",
+		"/home/aaa/Documents/python/hypocrisy/defaults/run",
+		"/home/aaa/Documents/python/stupid/src/model.py",
+		"/home/aaa/Documents/python/stupid/src/server.py",
+		"/home/aaa/Documents/python/stupid/compose.yml",
+		"/home/aaa/Documents/python/stupid/Dockerfile",
+		"/home/aaa/Documents/python/stupid/ollama/Dockerfile",
+		"/home/aaa/Documents/python/stupid/server/server.py",
+		"/home/aaa/Documents/python/stupid/docker/compose.yml",
+		"/home/aaa/Documents/python/stupid/docker/Dockerfile",
+		"/home/aaa/Documents/python/stupid/server.py",
+		"/home/aaa/Documents/python/stupid/uv.lock",
+		"/home/aaa/Documents/studia/pwr-dbdes/lab1/doc.tex",
+		"/home/aaa/Documents/studia/pwr-dbdes/.gitignore",
+		"/home/aaa/Documents/python/cv/src/cv/common.py",
+		"/home/aaa/Documents/python/cv/src/cv/__init__.py",
+		"/home/aaa/Documents/python/cv/src/cv/displacement_test.py",
+		"/home/aaa/Documents/python/cv/src/cv/capture.py",
+		"/home/aaa/Documents/python/cv/common.py",
+		"/home/aaa/Documents/python/cv/capture.py",
+		"/home/aaa/Documents/python/cv/displacement_test.py",
+		"/home/aaa/Documents/python/py_power_manager/sim/data.py",
+		"/home/aaa/Documents/python/py_power_manager/sim/hardware.py",
+		"/home/aaa/Documents/python/py_power_manager/sim/decision.py",
+		"/home/aaa/Documents/python/py_power_manager/sim/sim.py",
+		"/home/aaa/Documents/python/py_power_manager/sim/eval.py",
+		"/home/aaa/Documents/python/py_power_manager/proc_data.json",
+		"/home/aaa/Documents/python/py_power_manager/sim/__init__.py",
+		"/home/aaa/Games/balatro_code/functions/misc_functions.lua",
+		"/home/aaa/Documents/python/cv/camera_model.pickle",
+		"/home/aaa/Documents/python/cv/calibrate.py",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/final.fsh",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/lib/colors.glsl",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/lib/paint.glsl",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/composite3.fsh",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/composite2.fsh",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/composite1.fsh",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/lib/hsv.glsl",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/lib/lightSources.glsl",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/composite1.vsh",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/composite2.vsh",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/gbuffers_textured_lit.fsh",
+		"/home/aaa/.local/share/PrismLauncher/instances/1.21.1/minecraft/shaderpacks/something/shaders/shadow.vsh",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/database/create_queries.py",
+		"/home/aaa/Documents/python/music_downloader/firefox-addon/sidebar/popup.css",
+		"/home/aaa/Documents/python/music_downloader/log.log",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/downloader.py",
+		"/home/aaa/Documents/python/music_downloader/docs/packets.md",
+		"/home/aaa/Documents/python/music_downloader/firefox-addon/bandcamp.js",
+		"/home/aaa/Documents/python/music_downloader/firefox-addon/sidebar/popup.html",
+		"/home/aaa/Documents/python/music_downloader/firefox-addon/sidebar/popup.js",
+		"/home/aaa/Documents/python/music_downloader/firefox-addon/manifest.json",
+		"/home/aaa/Documents/python/hypocrisy/server/static/css/main.css",
+		"/home/aaa/Documents/python/hypocrisy/server/templates/login.html",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/database/__init__.py",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/__init__.py",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/packets.py",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/server.py",
+		"/home/aaa/Documents/python/music_downloader/.gitignore",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/config.py",
+		"/home/aaa/Documents/python/music_downloader/config.toml",
+		"/home/aaa/Documents/python/hypocrisy/src/hypocrisy/server/templates/apps/add_app.html",
+		"/home/aaa/Documents/python/hypocrisy/server/static/css/input.css",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/file.py",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/database/sources.py",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/database/categories.py",
+		"/home/aaa/.zshrc",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/database/users.py",
+		"/home/aaa/Documents/python/music_downloader/firefox-addon/index.html",
+		"/home/aaa/Documents/python/music_downloader/src/music_downloader/database.py",
+		"/home/aaa/Documents/python/music_downloader/.env",
+		"/home/aaa/Documents/python/music_downloader/firefox-addon",
+		"/home/aaa/Documents/python/py_power_manager/local.toml",
+		"/home/aaa/Documents/python/py_power_manager/headers.json",
+		"/home/aaa/Documents/python/py_power_manager/X.json",
+		"/home/aaa/Documents/python/py_power_manager/.gitignore",
+		"/home/aaa/Documents/python/py_power_manager/prediction/data.py"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 138.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"Theme.Filetransfer",
+			"example.file_transfer"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Theme.Osmium"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/src/main/java/com/plat/osmium/ui/OsmiumApp.kt",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								437,
+								437
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": "\\",
+									"selector": "text.tex.latex"
+								},
+								{
+									"characters": ".",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "LSP-kotlin"
+								}
+							],
+							"lsp_active": true,
+							"lsp_uri": "file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/OsmiumApp.kt",
+							"show_definitions": false,
+							"syntax": "Packages/Kotlin/Kotlin.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/src/main/java/com/plat/osmium/ui/theme/Theme.kt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1689,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1048,
+								1059
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": "\\",
+									"selector": "text.tex.latex"
+								},
+								{
+									"characters": ".",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "LSP-kotlin"
+								}
+							],
+							"lsp_active": true,
+							"lsp_uri": "file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme/Theme.kt",
+							"show_definitions": false,
+							"syntax": "Packages/Kotlin/Kotlin.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 76.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 178.0,
+		"history":
+		[
+		]
+	},
+	"output.LSP Messages":
+	{
+		"height": 140.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus":
+	{
+		"height": 445.0,
+		"history":
+		[
+		]
+	},
+	"output.diagnostics":
+	{
+		"height": 172.0,
+		"history":
+		[
+		]
+	},
+	"output.exec":
+	{
+		"height": 215.0,
+		"history":
+		[
+			"\n"
+		]
+	},
+	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.git":
+	{
+		"height": 202.0,
+		"history":
+		[
+		]
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.mdpopups-dummy":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "Run on Android",
+	"project": "android-file-transfer.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"lsp_show_inlay_hints": false
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 361.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

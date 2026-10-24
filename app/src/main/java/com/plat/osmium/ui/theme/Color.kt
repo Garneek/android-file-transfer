@@ -1,4 +1,4 @@
-package com.example.file_transfer.ui.theme
+package com.plat.osmium.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
