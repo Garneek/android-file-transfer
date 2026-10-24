@@ -1,4 +1,4 @@
-package com.example.file_transfer
+package com.plat.osmium
 
 import org.junit.Test
 

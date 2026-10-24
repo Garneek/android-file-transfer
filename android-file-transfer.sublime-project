@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"build_systems": [
+		{
+			"name": "Run on Android",
+			"shell_cmd": "$project_path/gradlew -p $project_path installDebug && adb shell am start -n com.plat.osmium/com.plat.osmium.MainActivity"
+		}
+	]
+}
