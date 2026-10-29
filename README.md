@@ -47,3 +47,5 @@ Widok transferu. Podgląd, pauza i odwołanie transferu
 Ustawienia globalne
 
 ![Settings view](resources/mockup/Settings%20view.png)
+
+[Link do projektu w Figmie](https://www.figma.com/design/srLpykh4LJWcoB33OThP62/Osmium-mockup-1)
