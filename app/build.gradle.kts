@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     id("com.google.devtools.ksp") version "2.3.10"
-}  
+}
 
 
 android {
@@ -39,24 +39,9 @@ android {
 }
 
 dependencies {
-//    implementation(libs.androidx.room3.runtime)
-//    ksp(libs.androidx.room3.compiler)
-//
-//    // ViewModel
-//    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-//    // ViewModel utilities for Compose
-//    implementation(libs.androidx.lifecycle.viewmodel.compose)
-//    // LiveData
-//    implementation(libs.androidx.lifecycle.livedata.ktx)
-//    // Lifecycles only (without ViewModel or LiveData)
-//    implementation(libs.androidx.lifecycle.runtime.ktx)
-//    // Lifecycle utilities for Compose
-//    implementation(libs.androidx.lifecycle.runtime.compose)
-//
-//    // Saved state module for ViewModel
-//    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
-
-
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.room3.common)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.11.0")
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)

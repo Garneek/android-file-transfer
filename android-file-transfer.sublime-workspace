@@ -520,115 +520,223 @@
 	"buffers":
 	[
 		{
-			"contents": "package com.plat.osmium.ui\n\nimport androidx.compose.foundation.layout.fillMaxSize\nimport androidx.compose.material3.Scaffold\nimport androidx.compose.runtime.Composable\nimport androidx.compose.ui.Modifier\nimport androidx.compose.material3.Text\n\nimport com.plat.osmium.ui.theme.OsmiumTheme\n\n// @Preview\n@Composable\nfun OsmiumApp() {\n    OsmiumTheme {\n        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->\n            Text( \n                \"Something\"\n            )\n        }\n    }\n\n}\n\n",
-			"file": "app/src/main/java/com/plat/osmium/ui/OsmiumApp.kt",
-			"file_size": 499,
-			"file_write_time": 134372696176716290,
-			"redo_stack":
-			[
-				[
-					186,
-					1,
-					"insert",
-					{
-						"characters": " vc"
-					},
-					"AwAAALcBAAAAAAAAtwEAAAAAAAABAAAAY7YBAAAAAAAAtgEAAAAAAAABAAAAdrUBAAAAAAAAtQEAAAAAAAABAAAAIA",
-					"AQAAAAAAAAABAAAAuAEAAAAAAAC4AQAAAAAAAAAAAAAAAPC/"
-				]
-			],
+			"file": "app/src/main/java/com/plat/osmium/db/ProfileSettingsDao.kt",
 			"settings":
 			{
-				"buffer_size": 500,
+				"buffer_size": 135,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			},
 			"undo_stack":
 			[
 				[
-					12,
-					1,
-					"toggle_comment",
-					{
-						"block": false
-					},
-					"AQAAAKcEAAAAAAAApwQAAAAAAAADAAAALy8g",
-					"AQAAAAAAAAABAAAAsQQAAAAAAACxBAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					21,
-					1,
-					"reindent",
-					null,
-					"AQAAAMUEAAAAAAAAxgQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAxQQAAAAAAADFBAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					22,
+					5,
 					1,
 					"insert",
 					{
-						"characters": "Fi"
+						"characters": "\\\\"
 					},
-					"AgAAAMYEAAAAAAAAxwQAAAAAAAAAAAAAxwQAAAAAAADIBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAxgQAAAAAAADGBAAAAAAAAAAAAAAAAPC/"
+					"AgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
 				],
 				[
-					28,
-					1,
-					"paste",
+					6,
+					2,
+					"left_delete",
 					null,
-					"AQAAAMYEAAAAAAAA0QQAAAAAAAACAAAARmk",
-					"AQAAAAAAAAABAAAAxgQAAAAAAADIBAAAAAAAAAAAAAAAAPC/"
+					"AgAAAAEAAAAAAAAAAQAAAAAAAAABAAAAXAAAAAAAAAAAAAAAAAAAAAABAAAAXA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAA8L8"
 				],
 				[
-					30,
+					7,
+					1,
+					"insert",
+					{
+						"characters": "\n\n@"
+					},
+					"AwAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					8,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAIAAAAAAAAAAgAAAAAAAAABAAAAQA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAADAAAAAAAAAAMAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": "package"
+					},
+					"BwAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": " com"
+					},
+					"BAAAAAcAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAJAAAAAAAAAAAAAAAJAAAAAAAAAAoAAAAAAAAAAAAAAAoAAAAAAAAACwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAHAAAAAAAAAAcAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					12,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAAsAAAAAAAAADAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAALAAAAAAAAAAsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": "plat."
+					},
+					"BQAAAAwAAAAAAAAADQAAAAAAAAAAAAAADQAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA8AAAAAAAAAAAAAAA8AAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAARAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					18,
 					1,
 					"lsp_apply_text_document_edit",
 					{
 						"edits":
 						[
 							{
-								"newText": "    ",
+								"newText": "osmium.",
 								"range":
 								{
 									"end":
 									{
-										"character": 1,
-										"line": 30
+										"character": 17,
+										"line": 0
 									},
 									"start":
 									{
-										"character": 0,
-										"line": 30
+										"character": 17,
+										"line": 0
 									}
 								}
 							}
 						],
-						"label": "Format on Save"
+						"label": null
 					},
-					"AQAAAMUEAAAAAAAAyQQAAAAAAAABAAAACQ",
-					"AQAAAAAAAAABAAAA0QQAAAAAAADRBAAAAAAAAAAAAAAAAPC/"
+					"AQAAABEAAAAAAAAAGAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					20,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAABgAAAAAAAAAGQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAYAAAAAAAAABgAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					21,
+					1,
+					"left_delete",
+					null,
+					"AQAAABgAAAAAAAAAGAAAAAAAAAABAAAALg",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAZAAAAAAAAABkAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					22,
+					1,
+					"insert",
+					{
+						"characters": "db."
+					},
+					"AwAAABgAAAAAAAAAGQAAAAAAAAAAAAAAGQAAAAAAAAAaAAAAAAAAAAAAAAAaAAAAAAAAABsAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAYAAAAAAAAABgAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					23,
+					1,
+					"left_delete",
+					null,
+					"AQAAABoAAAAAAAAAGgAAAAAAAAABAAAALg",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAbAAAAAAAAABsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": "\n\ninte"
+					},
+					"BgAAABoAAAAAAAAAGwAAAAAAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAAAAAAAcAAAAAAAAAB0AAAAAAAAAAAAAAB0AAAAAAAAAHgAAAAAAAAAAAAAAHgAAAAAAAAAfAAAAAAAAAAAAAAAfAAAAAAAAACAAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAaAAAAAAAAABoAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					27,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAABwAAAAAAAAAHAAAAAAAAAAEAAAAaW50ZQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					28,
+					1,
+					"insert",
+					{
+						"characters": "@"
+					},
+					"AQAAABwAAAAAAAAAHQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAcAAAAAAAAABwAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					30,
+					1,
+					"insert",
+					{
+						"characters": "dAO"
+					},
+					"AwAAAB0AAAAAAAAAHgAAAAAAAAAAAAAAHgAAAAAAAAAfAAAAAAAAAAAAAAAfAAAAAAAAACAAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAdAAAAAAAAAB0AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					31,
+					3,
+					"left_delete",
+					null,
+					"AwAAAB8AAAAAAAAAHwAAAAAAAAABAAAATx4AAAAAAAAAHgAAAAAAAAABAAAAQR0AAAAAAAAAHQAAAAAAAAABAAAAZA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					32,
 					1,
-					"insert_snippet",
+					"insert",
 					{
-						"contents": "{$0}"
+						"characters": "Dao"
 					},
-					"AQAAANQEAAAAAAAA1gQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA1AQAAAAAAADUBAAAAAAAAAAAAAAAAPC/"
+					"AwAAAB0AAAAAAAAAHgAAAAAAAAAAAAAAHgAAAAAAAAAfAAAAAAAAAAAAAAAfAAAAAAAAACAAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAdAAAAAAAAAB0AAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					33,
 					1,
-					"run_macro_file",
+					"insert",
 					{
-						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+						"characters": "\ninterface"
 					},
-					"BAAAANUEAAAAAAAA2gQAAAAAAAAAAAAA2gQAAAAAAADfBAAAAAAAAAAAAADWBAAAAAAAANYEAAAAAAAABAAAACAgICDWBAAAAAAAANsEAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA1QQAAAAAAADVBAAAAAAAAAAAAAAAAPC/"
+					"CgAAACAAAAAAAAAAIQAAAAAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAAAAAAAAiAAAAAAAAACMAAAAAAAAAAAAAACMAAAAAAAAAJAAAAAAAAAAAAAAAJAAAAAAAAAAlAAAAAAAAAAAAAAAlAAAAAAAAACYAAAAAAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAAAAAAJwAAAAAAAAAoAAAAAAAAAAAAAAAoAAAAAAAAACkAAAAAAAAAAAAAACkAAAAAAAAAKgAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					35,
@@ -638,305 +746,151 @@
 						"edits":
 						[
 							{
-								"newText": " ",
+								"newText": "import androidx.room3.Dao\n\n",
 								"range":
 								{
 									"end":
 									{
-										"character": 15,
-										"line": 30
-									},
-									"start":
-									{
-										"character": 15,
-										"line": 30
-									}
-								}
-							},
-							{
-								"newText": "",
-								"range":
-								{
-									"end":
-									{
-										"character": 5,
-										"line": 31
+										"character": 0,
+										"line": 2
 									},
 									"start":
 									{
 										"character": 0,
-										"line": 31
+										"line": 2
 									}
 								}
 							}
 						],
-						"label": "Format on Save"
+						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/db/ProfileSettingsDao.kt"
 					},
-					"AgAAANYEAAAAAAAA1gQAAAAAAAAFAAAAICAgIAnUBAAAAAAAANUEAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA2wQAAAAAAADbBAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					37,
-					1,
-					"reindent",
-					null,
-					"AQAAANcEAAAAAAAA3AQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA1wQAAAAAAADXBAAAAAAAAAAAAAAAAPC/"
+					"AQAAABwAAAAAAAAANwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAgAAAAAAAAACAAAAAAAAAAAAAAAABAVEA"
 				],
 				[
 					38,
 					1,
 					"insert",
 					{
-						"characters": "Text"
+						"characters": " "
 					},
-					"BAAAANwEAAAAAAAA3QQAAAAAAAAAAAAA3QQAAAAAAADeBAAAAAAAAAAAAADeBAAAAAAAAN8EAAAAAAAAAAAAAN8EAAAAAAAA4AQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA3AQAAAAAAADcBAAAAAAAAAAAAAAAAPC/"
+					"AQAAAEUAAAAAAAAARgAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABFAAAAAAAAAEUAAAAAAAAAAAAAAAAA8L8"
 				],
 				[
-					39,
+					40,
 					1,
-					"delete_word",
+					"insert",
 					{
-						"forward": false
+						"characters": "Prov"
 					},
-					"AQAAANwEAAAAAAAA3AQAAAAAAAAEAAAAVGV4dA",
-					"AQAAAAAAAAABAAAA4AQAAAAAAADgBAAAAAAAAAAAAAAAAPC/"
+					"BAAAAEYAAAAAAAAARwAAAAAAAAAAAAAARwAAAAAAAABIAAAAAAAAAAAAAABIAAAAAAAAAEkAAAAAAAAAAAAAAEkAAAAAAAAASgAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABGAAAAAAAAAEYAAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					41,
 					1,
-					"lsp_apply_text_document_edit",
-					{
-						"edits":
-						[
-							{
-								"newText": "",
-								"range":
-								{
-									"end":
-									{
-										"character": 5,
-										"line": 31
-									},
-									"start":
-									{
-										"character": 0,
-										"line": 31
-									}
-								}
-							}
-						],
-						"label": "Format on Save"
-					},
-					"AQAAANcEAAAAAAAA1wQAAAAAAAAFAAAAICAgIAk",
-					"AQAAAAAAAAABAAAA3AQAAAAAAADcBAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					44,
-					1,
-					"paste",
+					"left_delete",
 					null,
-					"AQAAANcEAAAAAAAA1gUAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA1wQAAAAAAADXBAAAAAAAAAAAAAAAAPC/"
+					"AQAAAEkAAAAAAAAASQAAAAAAAAABAAAAdg",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABKAAAAAAAAAEoAAAAAAAAAAAAAAAAA8L8"
 				],
 				[
-					46,
+					42,
+					1,
+					"insert",
+					{
+						"characters": "fi"
+					},
+					"AgAAAEkAAAAAAAAASgAAAAAAAAAAAAAASgAAAAAAAABLAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABJAAAAAAAAAEkAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					45,
 					1,
 					"lsp_apply_text_document_edit",
 					{
 						"edits":
 						[
 							{
-								"newText": "",
+								"newText": "leSettingsDao",
 								"range":
 								{
 									"end":
 									{
-										"character": 16,
-										"line": 31
+										"character": 15,
+										"line": 5
 									},
 									"start":
 									{
-										"character": 8,
-										"line": 31
-									}
-								}
-							},
-							{
-								"newText": "",
-								"range":
-								{
-									"end":
-									{
-										"character": 20,
-										"line": 32
-									},
-									"start":
-									{
-										"character": 12,
-										"line": 32
-									}
-								}
-							},
-							{
-								"newText": "",
-								"range":
-								{
-									"end":
-									{
-										"character": 24,
-										"line": 33
-									},
-									"start":
-									{
-										"character": 16,
-										"line": 33
-									}
-								}
-							},
-							{
-								"newText": "",
-								"range":
-								{
-									"end":
-									{
-										"character": 24,
-										"line": 34
-									},
-									"start":
-									{
-										"character": 16,
-										"line": 34
-									}
-								}
-							},
-							{
-								"newText": "",
-								"range":
-								{
-									"end":
-									{
-										"character": 20,
-										"line": 35
-									},
-									"start":
-									{
-										"character": 12,
-										"line": 35
-									}
-								}
-							},
-							{
-								"newText": "",
-								"range":
-								{
-									"end":
-									{
-										"character": 16,
-										"line": 36
-									},
-									"start":
-									{
-										"character": 8,
-										"line": 36
+										"character": 15,
+										"line": 5
 									}
 								}
 							}
 						],
-						"label": "Format on Save"
+						"label": null
 					},
-					"BgAAAM0FAAAAAAAAzQUAAAAAAAAIAAAAICAgICAgICC7BQAAAAAAALsFAAAAAAAACAAAACAgICAgICAgfQUAAAAAAAB9BQAAAAAAAAgAAAAgICAgICAgIFMFAAAAAAAAUwUAAAAAAAAIAAAAICAgICAgICAxBQAAAAAAADEFAAAAAAAACAAAACAgICAgICAg3wQAAAAAAADfBAAAAAAAAAgAAAAgICAgICAgIA",
-					"AQAAAAAAAAABAAAA1gUAAAAAAADWBQAAAAAAAAAAAAAAAPC/"
+					"AQAAAEsAAAAAAAAAWAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABLAAAAAAAAAEsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					47,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{$0}"
+					},
+					"AQAAAFgAAAAAAAAAWgAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABYAAAAAAAAAFgAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					48,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+					},
+					"AwAAAFkAAAAAAAAAWgAAAAAAAAAAAAAAWgAAAAAAAABbAAAAAAAAAAAAAABaAAAAAAAAAFsAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABZAAAAAAAAAFkAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					50,
+					1,
+					"insert",
+					{
+						"characters": "@QE"
+					},
+					"AwAAAFsAAAAAAAAAXAAAAAAAAAAAAAAAXAAAAAAAAABdAAAAAAAAAAAAAABdAAAAAAAAAF4AAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABbAAAAAAAAAFsAAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					51,
 					1,
 					"left_delete",
 					null,
-					"AQAAAOYEAAAAAAAA5gQAAAAAAAABAAAAZA",
-					"AQAAAAAAAAABAAAA5wQAAAAAAADnBAAAAAAAAAAAAAAAAPC/"
+					"AQAAAF0AAAAAAAAAXQAAAAAAAAABAAAARQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABeAAAAAAAAAF4AAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					52,
 					1,
 					"insert",
 					{
-						"characters": "d"
+						"characters": "ue"
 					},
-					"AQAAAOYEAAAAAAAA5wQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA5gQAAAAAAADmBAAAAAAAAAAAAAAAAPC/"
+					"AgAAAF0AAAAAAAAAXgAAAAAAAAAAAAAAXgAAAAAAAABfAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABdAAAAAAAAAF0AAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					55,
-					3,
-					"left_delete",
-					null,
-					"AwAAAB0AAAAAAAAAHQAAAAAAAAB8BAAAaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuYW5pbWF0aW9uLkFuaW1hdGVkVmlzaWJpbGl0eVNjb3BlCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLmFuaW1hdGlvbi5FeHBlcmltZW50YWxTaGFyZWRUcmFuc2l0aW9uQXBpCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLmFuaW1hdGlvbi5TaGFyZWRUcmFuc2l0aW9uTGF5b3V0CmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLmFuaW1hdGlvbi5TaGFyZWRUcmFuc2l0aW9uU2NvcGUKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuYW5pbWF0aW9uLmZhZGVJbgppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5hbmltYXRpb24uZmFkZU91dAppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5hbmltYXRpb24uc2xpZGVJblZlcnRpY2FsbHkKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuYW5pbWF0aW9uLnNsaWRlT3V0VmVydGljYWxseQppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5mb3VuZGF0aW9uLmxheW91dC5jb25zdW1lV2luZG93SW5zZXRzCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLmZvdW5kYXRpb24ubGF5b3V0LnBhZGRpbmcKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UuZm91bmRhdGlvbi5sYXlvdXQuc3lzdGVtQmFyc1BhZGRpbmcKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UubWF0ZXJpYWwzLlNuYWNrYmFySG9zdAppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5ydW50aW1lLkNvbXBvc2FibGUKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UucnVudGltZS5Db21wb3NpdGlvbkxvY2FsUHJvdmlkZXIKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UucnVudGltZS5jb21wb3NpdGlvbkxvY2FsT2YKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UucnVudGltZS5nZXRWYWx1ZQppbXBvcnQgYW5kcm9pZHguY29tcG9zZS51aS5Nb2RpZmllcgppbXBvcnQgYW5kcm9pZHguY29tcG9zZS51aS50b29saW5nLnByZXZpZXcuUHJldmlldwppbXBvcnQgYW5kcm9pZHgubmF2aWdhdGlvbi5OYXZCYWNrU3RhY2tFbnRyeQppbXBvcnQgYW5kcm9pZHgubmF2aWdhdGlvbi5OYXZUeXBlCmltcG9ydCBhbmRyb2lkeC5uYXZpZ2F0aW9uLmNvbXBvc2UuTmF2SG9zdAppbXBvcnQgYW5kcm9pZHgubmF2aWdhdGlvbi5jb21wb3NlLmN1cnJlbnRCYWNrU3RhY2tFbnRyeUFzU3RhdGUKaW1wb3J0IGFuZHJvaWR4Lm5hdmlnYXRpb24ubmF2QXJndW1lbnQcAAAAAAAAABwAAAAAAAAAAQAAAAobAAAAAAAAABsAAAAAAAAAAQAAAAo",
-					"AQAAAAAAAAABAAAAmQQAAAAAAAAdAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					64,
-					1,
-					"left_delete",
-					null,
-					"AQAAADIBAAAAAAAAMgEAAAAAAACoBwAALy8gICAgIEZpbGV0cmFuc2ZlclRoZW1lIHsKLy8gICAgICAgICB2YWwgamV0c25hY2tOYXZDb250cm9sbGVyID0gcmVtZW1iZXJKZXRzbmFja05hdkNvbnRyb2xsZXIoKQovLyAgICAgICAgIFNoYXJlZFRyYW5zaXRpb25MYXlvdXQgewovLyAgICAgICAgICAgICBDb21wb3NpdGlvbkxvY2FsUHJvdmlkZXIoCi8vICAgICAgICAgICAgICAgICBMb2NhbFNoYXJlZFRyYW5zaXRpb25TY29wZSBwcm92aWRlcyB0aGlzLAovLyAgICAgICAgICAgICApIHsKLy8gICAgICAgICAgICAgICAgIE5hdkhvc3QoCi8vICAgICAgICAgICAgICAgICAgICAgbmF2Q29udHJvbGxlciA9IGpldHNuYWNrTmF2Q29udHJvbGxlci5uYXZDb250cm9sbGVyLAovLyAgICAgICAgICAgICAgICAgICAgIHN0YXJ0RGVzdGluYXRpb24gPSBNYWluRGVzdGluYXRpb25zLkhPTUVfUk9VVEUsCi8vICAgICAgICAgICAgICAgICApIHsKLy8gICAgICAgICAgICAgICAgICAgICBjb21wb3NhYmxlV2l0aENvbXBvc2l0aW9uTG9jYWwoCi8vICAgICAgICAgICAgICAgICAgICAgICAgIHJvdXRlID0gTWFpbkRlc3RpbmF0aW9ucy5IT01FX1JPVVRFLAovLyAgICAgICAgICAgICAgICAgICAgICkgeyBiYWNrU3RhY2tFbnRyeSAtPgovLyAgICAgICAgICAgICAgICAgICAgICAgICBNYWluQ29udGFpbmVyKAovLyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb25TbmFja1NlbGVjdGVkID0gamV0c25hY2tOYXZDb250cm9sbGVyOjpuYXZpZ2F0ZVRvU25hY2tEZXRhaWwsCi8vICAgICAgICAgICAgICAgICAgICAgICAgICkKLy8gICAgICAgICAgICAgICAgICAgICB9CgovLyAgICAgICAgICAgICAgICAgICAgIGNvbXBvc2FibGVXaXRoQ29tcG9zaXRpb25Mb2NhbCgKLy8gICAgICAgICAgICAgICAgICAgICAgICAgIiR7TWFpbkRlc3RpbmF0aW9ucy5TTkFDS19ERVRBSUxfUk9VVEV9LyIgKwovLyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ7JHtNYWluRGVzdGluYXRpb25zLlNOQUNLX0lEX0tFWX19IiArCi8vICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIj9vcmlnaW49eyR7TWFpbkRlc3RpbmF0aW9ucy5PUklHSU59fSIsCi8vICAgICAgICAgICAgICAgICAgICAgICAgIGFyZ3VtZW50cyA9IGxpc3RPZigKLy8gICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hdkFyZ3VtZW50KE1haW5EZXN0aW5hdGlvbnMuU05BQ0tfSURfS0VZKSB7Ci8vICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9IE5hdlR5cGUuTG9uZ1R5cGUKLy8gICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0sCi8vICAgICAgICAgICAgICAgICAgICAgICAgICksCgovLyAgICAgICAgICAgICAgICAgICAgICkgeyBiYWNrU3RhY2tFbnRyeSAtPgovLyAgICAgICAgICAgICAgICAgICAgICAgICB2YWwgYXJndW1lbnRzID0gcmVxdWlyZU5vdE51bGwoYmFja1N0YWNrRW50cnkuYXJndW1lbnRzKQovLyAgICAgICAgICAgICAgICAgICAgICAgICB2YWwgc25hY2tJZCA9IGFyZ3VtZW50cy5nZXRMb25nKE1haW5EZXN0aW5hdGlvbnMuU05BQ0tfSURfS0VZKQovLyAgICAgICAgICAgICAgICAgICAgICAgICB2YWwgb3JpZ2luID0gYXJndW1lbnRzLmdldFN0cmluZyhNYWluRGVzdGluYXRpb25zLk9SSUdJTikKLy8gICAgICAgICAgICAgICAgICAgICAgICAgU25hY2tEZXRhaWwoCi8vICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzbmFja0lkLAovLyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb3JpZ2luID0gb3JpZ2luID86ICIiLAovLyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdXBQcmVzcyA9IGpldHNuYWNrTmF2Q29udHJvbGxlcjo6dXBQcmVzcywKLy8gICAgICAgICAgICAgICAgICAgICAgICAgKQovLyAgICAgICAgICAgICAgICAgICAgIH0KLy8gICAgICAgICAgICAgICAgIH0KLy8gICAgICAgICAgICAgfQovLyAgICAgICAgIH0KLy8gICAgIH0KLy8gfQ",
-					"AQAAAAAAAAABAAAAMgEAAAAAAADaCAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					70,
 					1,
 					"lsp_apply_text_document_edit",
 					{
 						"edits":
 						[
 							{
-								"newText": "import androidx.compose.runtime.Composable",
-								"range":
-								{
-									"end":
-									{
-										"character": 0,
-										"line": 2
-									},
-									"start":
-									{
-										"character": 0,
-										"line": 2
-									}
-								}
-							},
-							{
-								"newText": "\n\n",
-								"range":
-								{
-									"end":
-									{
-										"character": 0,
-										"line": 3
-									},
-									"start":
-									{
-										"character": 0,
-										"line": 3
-									}
-								}
-							}
-						],
-						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt"
-					},
-					"AgAAAB0AAAAAAAAAHwAAAAAAAAAAAAAAHAAAAAAAAABGAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAKAEAAAAAAAAoAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					73,
-					1,
-					"lsp_apply_text_document_edit",
-					{
-						"edits":
-						[
-							{
-								"newText": "import com.plat.osmium.ui.theme.OsmiumTheme",
+								"newText": "import androidx.room3.Query",
 								"range":
 								{
 									"end":
@@ -958,457 +912,91 @@
 									"end":
 									{
 										"character": 0,
-										"line": 5
+										"line": 4
 									},
 									"start":
 									{
 										"character": 0,
-										"line": 5
+										"line": 4
+									}
+								}
+							},
+							{
+								"newText": "ry",
+								"range":
+								{
+									"end":
+									{
+										"character": 5,
+										"line": 6
+									},
+									"start":
+									{
+										"character": 5,
+										"line": 6
 									}
 								}
 							}
 						],
-						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt"
+						"label": null
 					},
-					"AgAAAEkAAAAAAAAASgAAAAAAAAAAAAAARwAAAAAAAAByAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAVAEAAAAAAABUAQAAAAAAAAAAAAAAAPC/"
+					"AwAAAF8AAAAAAAAAYQAAAAAAAAAAAAAANwAAAAAAAAA4AAAAAAAAAAAAAAA2AAAAAAAAAFEAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABfAAAAAAAAAF8AAAAAAAAAAAAAAAAA8L8"
 				],
 				[
-					75,
-					1,
-					"lsp_apply_text_document_edit",
-					{
-						"edits":
-						[
-							{
-								"newText": "mate",
-								"range":
-								{
-									"end":
-									{
-										"character": 24,
-										"line": 2
-									},
-									"start":
-									{
-										"character": 24,
-										"line": 2
-									}
-								}
-							},
-							{
-								"newText": "ial3.Scaffold\nimport androidx.compose.r",
-								"range":
-								{
-									"end":
-									{
-										"character": 25,
-										"line": 2
-									},
-									"start":
-									{
-										"character": 25,
-										"line": 2
-									}
-								}
-							}
-						],
-						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt"
-					},
-					"AgAAADUAAAAAAAAAXAAAAAAAAAAAAAAANAAAAAAAAAA4AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAgAEAAAAAAACAAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					77,
-					1,
-					"lsp_apply_text_document_edit",
-					{
-						"edits":
-						[
-							{
-								"newText": "androidx.",
-								"range":
-								{
-									"end":
-									{
-										"character": 7,
-										"line": 4
-									},
-									"start":
-									{
-										"character": 7,
-										"line": 4
-									}
-								}
-							},
-							{
-								"newText": "pose",
-								"range":
-								{
-									"end":
-									{
-										"character": 10,
-										"line": 4
-									},
-									"start":
-									{
-										"character": 10,
-										"line": 4
-									}
-								}
-							},
-							{
-								"newText": "ui.Modifier\nim",
-								"range":
-								{
-									"end":
-									{
-										"character": 11,
-										"line": 4
-									},
-									"start":
-									{
-										"character": 11,
-										"line": 4
-									}
-								}
-							},
-							{
-								"newText": "ort com.p",
-								"range":
-								{
-									"end":
-									{
-										"character": 12,
-										"line": 4
-									},
-									"start":
-									{
-										"character": 12,
-										"line": 4
-									}
-								}
-							}
-						],
-						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt"
-					},
-					"BAAAAH4AAAAAAAAAhwAAAAAAAAAAAAAAfQAAAAAAAACLAAAAAAAAAAAAAAB8AAAAAAAAAIAAAAAAAAAAAAAAAHkAAAAAAAAAggAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAqwEAAAAAAACrAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					79,
-					1,
-					"lsp_apply_text_document_edit",
-					{
-						"edits":
-						[
-							{
-								"newText": "foundation.layout.fillMaxSize\ni",
-								"range":
-								{
-									"end":
-									{
-										"character": 24,
-										"line": 2
-									},
-									"start":
-									{
-										"character": 24,
-										"line": 2
-									}
-								}
-							},
-							{
-								"newText": "port ",
-								"range":
-								{
-									"end":
-									{
-										"character": 25,
-										"line": 2
-									},
-									"start":
-									{
-										"character": 25,
-										"line": 2
-									}
-								}
-							},
-							{
-								"newText": "ndroidx.compose.ma",
-								"range":
-								{
-									"end":
-									{
-										"character": 26,
-										"line": 2
-									},
-									"start":
-									{
-										"character": 26,
-										"line": 2
-									}
-								}
-							}
-						],
-						"label": "Update file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt"
-					},
-					"AwAAADYAAAAAAAAASAAAAAAAAAAAAAAANQAAAAAAAAA6AAAAAAAAAAAAAAA0AAAAAAAAAFMAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAzwEAAAAAAADPAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					82,
-					1,
-					"swap_line_down",
-					null,
-					"AgAAAPkAAAAAAAAAJQEAAAAAAAAAAAAAzAAAAAAAAADMAAAAAAAAACwAAABpbXBvcnQgY29tLnBsYXQub3NtaXVtLnVpLnRoZW1lLk9zbWl1bVRoZW1lCg",
-					"AQAAAAAAAAABAAAA8wAAAAAAAADzAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					92,
-					1,
-					"insert",
-					{
-						"characters": "\nText"
-					},
-					"BQAAAHsBAAAAAAAAhQEAAAAAAAAAAAAAhQEAAAAAAACGAQAAAAAAAAAAAACGAQAAAAAAAIcBAAAAAAAAAAAAAIcBAAAAAAAAiAEAAAAAAAAAAAAAiAEAAAAAAACJAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAewEAAAAAAAB7AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					93,
+					57,
 					1,
 					"insert_snippet",
 					{
 						"contents": "($0)"
 					},
-					"AQAAAIkBAAAAAAAAiwEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAiQEAAAAAAACJAQAAAAAAAAAAAAAAAPC/"
+					"AQAAAH0AAAAAAAAAfwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB9AAAAAAAAAH0AAAAAAAAAAAAAAAAA8L8"
 				],
 				[
-					95,
+					66,
 					1,
 					"lsp_apply_text_document_edit",
 					{
 						"edits":
 						[
 							{
-								"newText": "    ",
+								"newText": " ",
 								"range":
 								{
 									"end":
 									{
-										"character": 9,
-										"line": 14
+										"character": 28,
+										"line": 6
 									},
 									"start":
 									{
-										"character": 8,
-										"line": 14
-									}
-								}
-							}
-						],
-						"label": "Format on Save"
-					},
-					"AQAAAIQBAAAAAAAAiAEAAAAAAAABAAAACQ",
-					"AQAAAAAAAAABAAAAigEAAAAAAACKAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					97,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AwAAAI0BAAAAAAAAmgEAAAAAAAAAAAAAjgEAAAAAAACOAQAAAAAAAAwAAAAgICAgICAgICAgICCOAQAAAAAAAJsBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAjQEAAAAAAACNAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					100,
-					4,
-					"cut",
-					null,
-					"BAAAAJ0BAAAAAAAAnQEAAAAAAAAWAAAAICAgICAgICAgICAgR3JlZXRpbmcoCp0BAAAAAAAAnQEAAAAAAAAiAAAAICAgICAgICAgICAgICAgIG5hbWUgPSAiQW5kcm9pZCIsCp0BAAAAAAAAnQEAAAAAAAA6AAAAICAgICAgICAgICAgICAgIG1vZGlmaWVyID0gTW9kaWZpZXIucGFkZGluZyhpbm5lclBhZGRpbmcpCp0BAAAAAAAAnQEAAAAAAAAOAAAAICAgICAgICAgICAgKQo",
-					"AQAAAAAAAAABAAAArQEAAAAAAACtAQAAAAAAAAAAAAAAAGJA"
-				],
-				[
-					103,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AwAAAI0BAAAAAAAAmgEAAAAAAAAAAAAAjgEAAAAAAACOAQAAAAAAAAwAAAAgICAgICAgICAgICCOAQAAAAAAAJsBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAjQEAAAAAAACNAQAAAAAAAAAAAAAAIGNA"
-				],
-				[
-					104,
-					1,
-					"insert_snippet",
-					{
-						"contents": "\"$0\""
-					},
-					"AQAAAJsBAAAAAAAAnQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAmwEAAAAAAACbAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					105,
-					1,
-					"insert",
-					{
-						"characters": "S"
-					},
-					"AQAAAJwBAAAAAAAAnQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAnAEAAAAAAACcAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					106,
-					1,
-					"left_delete",
-					null,
-					"AQAAAJwBAAAAAAAAnAEAAAAAAAABAAAAUw",
-					"AQAAAAAAAAABAAAAnQEAAAAAAACdAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					107,
-					1,
-					"insert",
-					{
-						"characters": "Something"
-					},
-					"CQAAAJwBAAAAAAAAnQEAAAAAAAAAAAAAnQEAAAAAAACeAQAAAAAAAAAAAACeAQAAAAAAAJ8BAAAAAAAAAAAAAJ8BAAAAAAAAoAEAAAAAAAAAAAAAoAEAAAAAAAChAQAAAAAAAAAAAAChAQAAAAAAAKIBAAAAAAAAAAAAAKIBAAAAAAAAowEAAAAAAAAAAAAAowEAAAAAAACkAQAAAAAAAAAAAACkAQAAAAAAAKUBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAnAEAAAAAAACcAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					109,
-					1,
-					"lsp_apply_text_document_edit",
-					{
-						"edits":
-						[
-							{
-								"newText": "    ",
-								"range":
-								{
-									"end":
-									{
-										"character": 13,
-										"line": 15
-									},
-									"start":
-									{
-										"character": 12,
-										"line": 15
+										"character": 28,
+										"line": 6
 									}
 								}
 							},
 							{
-								"newText": "",
+								"newText": "    ",
 								"range":
 								{
 									"end":
 									{
-										"character": 13,
-										"line": 16
+										"character": 1,
+										"line": 7
 									},
 									"start":
 									{
-										"character": 12,
-										"line": 16
+										"character": 0,
+										"line": 7
 									}
 								}
 							}
 						],
 						"label": "Format on Save"
 					},
-					"AgAAALMBAAAAAAAAswEAAAAAAAABAAAACZoBAAAAAAAAngEAAAAAAAABAAAACQ",
-					"AQAAAAAAAAABAAAApQEAAAAAAAClAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					121,
-					1,
-					"paste",
-					null,
-					"AQAAAFIAAAAAAAAAfQAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfAAAAAAAAAB8AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					126,
-					1,
-					"insert",
-					{
-						"characters": "Text"
-					},
-					"BAAAAJ8AAAAAAAAAoAAAAAAAAAAIAAAAU2NhZmZvbGSgAAAAAAAAAKEAAAAAAAAAAAAAAKEAAAAAAAAAogAAAAAAAAAAAAAAogAAAAAAAACjAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAnwAAAAAAAACnAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					129,
-					1,
-					"cut",
-					null,
-					"AQAAAH0AAAAAAAAAfQAAAAAAAAAnAAAAaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UubWF0ZXJpYWwzLlRleHQK",
-					"AQAAAAAAAAABAAAAowAAAAAAAACjAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					137,
-					1,
-					"",
-					null,
-					"AQAAAMwAAAAAAAAA8gAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAzAAAAAAAAADMAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					140,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AQAAAPIAAAAAAAAA8wAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA8gAAAAAAAADyAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					185,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAALQBAAAAAAAAtQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAtAEAAAAAAAC0AQAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
-			"file": "app/src/main/java/com/plat/osmium/ui/theme/Theme.kt",
-			"settings":
-			{
-				"buffer_size": 1689,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-				[
-					6,
-					1,
-					"insert",
-					{
-						"characters": "OsmiumThem"
-					},
-					"CgAAABgEAAAAAAAAGQQAAAAAAAARAAAARmlsZXRyYW5zZmVyVGhlbWUZBAAAAAAAABoEAAAAAAAAAAAAABoEAAAAAAAAGwQAAAAAAAAAAAAAGwQAAAAAAAAcBAAAAAAAAAAAAAAcBAAAAAAAAB0EAAAAAAAAAAAAAB0EAAAAAAAAHgQAAAAAAAAAAAAAHgQAAAAAAAAfBAAAAAAAAAAAAAAfBAAAAAAAACAEAAAAAAAAAAAAACAEAAAAAAAAIQQAAAAAAAAAAAAAIQQAAAAAAAAiBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAGAQAAAAAAAApBAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					7,
-					1,
-					"insert",
-					{
-						"characters": "e"
-					},
-					"AQAAACIEAAAAAAAAIwQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAIgQAAAAAAAAiBAAAAAAAAAAAAAAAAPC/"
+					"AgAAAHYAAAAAAAAAegAAAAAAAAABAAAACXQAAAAAAAAAdQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACCAAAAAAAAAIIAAAAAAAAAAAAAAAAA8L8"
 				]
 			]
 		}
@@ -1585,6 +1173,38 @@
 		"selected_items":
 		[
 			[
+				"git rese",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git stash a",
+				"Git: Stash List"
+			],
+			[
+				"git stash",
+				"Git: Stash Changes"
+			],
+			[
+				"stas",
+				"Git: Stash Apply"
+			],
+			[
+				"git ",
+				"Git: Gui"
+			],
+			[
 				"lsp ",
 				"LSP: Troubleshoot Server"
 			],
@@ -1601,16 +1221,8 @@
 				"Package Control: Install Package"
 			],
 			[
-				"git push",
-				"Git: Push"
-			],
-			[
 				"git comm",
 				"Git: Commit"
-			],
-			[
-				"git add",
-				"Git: Add All"
 			],
 			[
 				"mark pre",
@@ -1649,10 +1261,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"git rese",
-				"Git: Reset (hard) HEAD"
-			],
-			[
 				"late ",
 				"LaTeXTools: Show build panel"
 			],
@@ -1679,10 +1287,6 @@
 			[
 				"lsp server",
 				"LSP: Troubleshoot Server"
-			],
-			[
-				"git ",
-				"Git: Add All"
 			],
 			[
 				"git add ",
@@ -1913,13 +1517,23 @@
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium",
-		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui",
-		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme",
-		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/res",
-		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/res/values"
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/db"
 	],
 	"file_history":
 	[
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/db/Server.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/db/FileChunk.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/db/File.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/db/ProfileSettings.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/db/settings/ProfileSettings.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme/Theme.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/OsmiumApp.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/build.gradle.kts",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/.gitignore",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/settings/GlobalSettingsDataStore.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/proto/global_settings.proto",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/common/ProductionDispatcherProvider.kt",
+		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/common/DispatcherProvider.kt",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/AndroidManifest.xml",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/res/values/strings.xml",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/res/values/themes.xml",
@@ -1927,18 +1541,15 @@
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/MainActivity.kt",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/test/java/com/example/file_transfer/ExampleUnitTest.kt",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/androidTest/java/com/example/file_transfer/ExampleInstrumentedTest.kt",
-		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/build.gradle.kts",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/android-file-transfer.sublime-project",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/Osmium.kt",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme/Type.kt",
-		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme/Theme.kt",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/network_protocol/FileSystemManager.kt",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/example/file_transfer/MainActivity.kt",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/example/file_transfer/ui/Osmium.kt",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme/Color.kt",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/example/file_transfer/ui/theme/Theme.kt",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/settings.gradle.kts",
-		"/home/aaa/Documents/studia/android-projects/android-file-transfer/.gitignore",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/config.toml",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/test/__init__.py",
 		"/home/aaa/Documents/studia/android-projects/android-file-transfer/server/src/server/__init__.py",
@@ -2037,17 +1648,7 @@
 		"/home/aaa/Documents/python/music_downloader/src/music_downloader/file.py",
 		"/home/aaa/Documents/python/music_downloader/src/music_downloader/database/sources.py",
 		"/home/aaa/Documents/python/music_downloader/src/music_downloader/database/categories.py",
-		"/home/aaa/.zshrc",
-		"/home/aaa/Documents/python/music_downloader/src/music_downloader/database/users.py",
-		"/home/aaa/Documents/python/music_downloader/firefox-addon/index.html",
-		"/home/aaa/Documents/python/music_downloader/src/music_downloader/database.py",
-		"/home/aaa/Documents/python/music_downloader/.env",
-		"/home/aaa/Documents/python/music_downloader/firefox-addon",
-		"/home/aaa/Documents/python/py_power_manager/local.toml",
-		"/home/aaa/Documents/python/py_power_manager/headers.json",
-		"/home/aaa/Documents/python/py_power_manager/X.json",
-		"/home/aaa/Documents/python/py_power_manager/.gitignore",
-		"/home/aaa/Documents/python/py_power_manager/prediction/data.py"
+		"/home/aaa/.zshrc"
 	],
 	"find":
 	{
@@ -2066,6 +1667,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"file-transfer",
 			"Theme.Filetransfer",
 			"example.file_transfer"
 		],
@@ -2092,20 +1694,20 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/src/main/java/com/plat/osmium/ui/OsmiumApp.kt",
+					"file": "app/src/main/java/com/plat/osmium/db/ProfileSettingsDao.kt",
 					"selected": true,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 500,
+						"buffer_size": 135,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								437,
-								437
+								135,
+								135
 							]
 						],
 						"settings":
@@ -2131,59 +1733,7 @@
 								}
 							],
 							"lsp_active": true,
-							"lsp_uri": "file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/OsmiumApp.kt",
-							"show_definitions": false,
-							"syntax": "Packages/Kotlin/Kotlin.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/src/main/java/com/plat/osmium/ui/theme/Theme.kt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1689,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1048,
-								1059
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html, text.xml"
-								},
-								{
-									"rhs_empty": true,
-									"selector": "punctuation.accessor"
-								},
-								{
-									"characters": "\\",
-									"selector": "text.tex.latex"
-								},
-								{
-									"characters": ".",
-									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
-									"server": "LSP-kotlin"
-								}
-							],
-							"lsp_active": true,
-							"lsp_uri": "file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/ui/theme/Theme.kt",
+							"lsp_uri": "file:///home/aaa/Documents/studia/android-projects/android-file-transfer/app/src/main/java/com/plat/osmium/db/ProfileSettingsDao.kt",
 							"show_definitions": false,
 							"syntax": "Packages/Kotlin/Kotlin.sublime-syntax",
 							"tab_size": 4,
@@ -2193,7 +1743,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"stack_multiselect": false,
 					"type": "text"
 				}
