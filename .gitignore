@@ -46,3 +46,5 @@ config.toml
 __pycache__
 instance
 
+mapping.txt
+*.sublime-workspace
