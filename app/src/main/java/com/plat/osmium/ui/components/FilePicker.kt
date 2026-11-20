@@ -9,20 +9,18 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.animation.shrinkVertically
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.absoluteOffset
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.FilledIconButton
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
@@ -159,113 +157,88 @@ fun FileList(
       items(files.size) { idx ->
         val file = files[idx]
         val selectable = filePickerViewModel.checkFileMatches(file.first)
-        FileListItem(
-          file = file.first,
-          selected = filePickerViewModel.isSelected(
-            idx,
-            filePickerViewModel.selectedIdx.collectAsState().value
-          ),
-          selectable = selectable,
-          selectMode = selectMode,
-          target = filePickerViewModel.target,
-          onFileSelect = { filePickerViewModel.selectFile(idx) },
-          navigateTo = { filePickerViewModel.goToDirectory(file.first) },
+
+        val selected = filePickerViewModel.isSelected(
+          idx,
+          filePickerViewModel.selectedIdx.collectAsState().value
+        ) && selectMode
+
+        ListItem(
+          elevation = ListItemDefaults.elevation(8.dp),
+          verticalAlignment = Alignment.CenterVertically,
+          modifier = Modifier.padding(horizontal = 8.dp),
+          selected = selected,
+          onClick = hapticClick {
+            if (selectMode && selectable)
+              when (filePickerViewModel.target) {
+                FilePickerViewModel.Target.Directory,
+                FilePickerViewModel.Target.File -> filePickerViewModel.selectFile(idx)
+
+                FilePickerViewModel.Target.MultiFile -> filePickerViewModel.setSelectionFile(
+                  idx,
+                  !selected
+                )
+              }
+            else if (!selectMode) {
+              filePickerViewModel.goToDirectory(file.first)
+            }
+          },
           onLongClick = {
             if (!selectMode && selectable) {
               enableSelectMode()
               filePickerViewModel.selectFile(idx)
             }
           },
-          onSetSelection = { v -> filePickerViewModel.setSelectionFile(idx, v) }
+          leadingContent = {
+            ImageLoader(
+              file.first,
+              modifier = Modifier
+                .size(64.dp)
+                .clip(RoundedCornerShape(16.dp)),
+            )
+          },
+          trailingContent = {
+            val haptics = LocalHapticFeedback.current
+            val audioManager =
+              LocalContext.current.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+
+            if (selectMode && selectable) {
+              when (filePickerViewModel.target) {
+                FilePickerViewModel.Target.Directory, FilePickerViewModel.Target.File -> {
+                  RadioButton(
+                    selected = selected,
+                    onClick = hapticClick { filePickerViewModel.selectFile(idx) }
+                  )
+                }
+
+                FilePickerViewModel.Target.MultiFile -> {
+                  Checkbox(
+                    checked = selected,
+                    onCheckedChange = { v ->
+                      audioManager.playSoundEffect(AudioManager.FX_KEY_CLICK, 1.0f)
+                      haptics.performHapticFeedback(
+                        if (selected) HapticFeedbackType.ToggleOn
+                        else HapticFeedbackType.ToggleOff
+                      )
+                      filePickerViewModel.setSelectionFile(idx, v)
+                    }
+                  )
+                }
+              }
+            }
+          },
+          supportingContent = {
+            if (file.first.isFile)
+              Text(text = fileSizeFormatter(getFileSize(file.first)))
+          },
+          content = {
+            Text(text = file.first.name, maxLines = 1)
+          },
         )
-        HorizontalDivider(thickness = 1.dp)
+        Spacer(Modifier.height(1.dp))
       }
     }
   }
-}
-
-@RequiresApi(Build.VERSION_CODES.O)
-@Composable
-private fun FileListItem(
-  file: File,
-  selected: Boolean,
-  selectable: Boolean,
-  selectMode: Boolean,
-  target: FilePickerViewModel.Target,
-  onFileSelect: () -> Unit,
-  navigateTo: () -> Unit,
-  onLongClick: () -> Unit,
-  onSetSelection: (Boolean) -> Unit
-) {
-  val colors = if (selected && selectMode)
-    ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.secondaryContainer)
-  else
-    ListItemDefaults.colors()
-
-  ListItem(
-    leadingContent = {
-      ImageLoader(
-        file,
-        modifier = Modifier
-          .size(64.dp)
-          .clip(RoundedCornerShape(16.dp)),
-      )
-    },
-    headlineContent = {
-      Text(text = file.name, maxLines = 1)
-    },
-    supportingContent = {
-      if (file.isFile)
-        Text(text = fileSizeFormatter(getFileSize(file)))
-    },
-    modifier = Modifier
-      .combinedClickable(
-        true,
-        onClick = hapticClick {
-          if (selectMode && selectable) {
-            when (target) {
-              FilePickerViewModel.Target.Directory,
-              FilePickerViewModel.Target.File -> onFileSelect()
-
-              FilePickerViewModel.Target.MultiFile -> onSetSelection(!selected)
-            }
-          } else if (!selectMode) navigateTo()
-        },
-        onLongClick = hapticLongPress {
-          onLongClick()
-        }
-      ),
-    colors = colors,
-    trailingContent = {
-      val haptics = LocalHapticFeedback.current
-      val audioManager =
-        LocalContext.current.getSystemService(Context.AUDIO_SERVICE) as AudioManager
-
-      if (selectMode && selectable) {
-        when (target) {
-          FilePickerViewModel.Target.Directory, FilePickerViewModel.Target.File -> {
-            RadioButton(
-              selected = selected,
-              onClick = hapticClick { onFileSelect() }
-            )
-          }
-
-          FilePickerViewModel.Target.MultiFile -> {
-            Checkbox(
-              checked = selected,
-              onCheckedChange = { v ->
-                audioManager.playSoundEffect(AudioManager.FX_KEY_CLICK, 1.0f)
-                haptics.performHapticFeedback(
-                  if (selected) HapticFeedbackType.ToggleOn
-                  else HapticFeedbackType.ToggleOff
-                )
-                onSetSelection(v)
-              }
-            )
-          }
-        }
-      }
-    })
 }
 
 @Composable
@@ -285,7 +258,6 @@ private fun FileTopBar(
       Column {
         Text(
           text = stringResource(target.resId) + ": " + directoryName,
-          style = MaterialTheme.typography.titleLarge,
           maxLines = 1,
           softWrap = false,
           modifier = Modifier.padding(end = 16.dp)

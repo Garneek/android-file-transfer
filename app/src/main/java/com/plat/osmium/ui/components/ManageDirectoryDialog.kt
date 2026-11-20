@@ -1,5 +1,10 @@
 package com.plat.osmium.ui.components
 
+import android.os.Build
+import androidx.annotation.RequiresApi
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -16,22 +21,83 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import androidx.lifecycle.viewmodel.MutableCreationExtras
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.plat.osmium.R
-import com.plat.osmium.ui.ServersListDirectoriesViewModel
+import com.plat.osmium.domain.FilePickerViewModel
+import com.plat.osmium.domain.ServersListDirectoriesViewModel
 
+@RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable
 fun ManageDirectoryDialog(
-  state: ServersListDirectoriesViewModel.ManagementDialogState,
+  directoryViewModel: ServersListDirectoriesViewModel,
   onDismissRequest: () -> Unit,
-  onEdit: () -> Unit = {},
-  onDelete: () -> Unit = {},
-  onDeleteConfirm: () -> Unit = {},
+) {
+  when (val dialogState = directoryViewModel.managementDialog.collectAsState().value) {
+    ServersListDirectoriesViewModel.ManagementDialogState.Start,
+    ServersListDirectoriesViewModel.ManagementDialogState.ConfirmDelete ->
+      DialogBase(onDismissRequest) {
+        AnimatedVisibility(
+          dialogState == ServersListDirectoriesViewModel.ManagementDialogState.Start,
+          enter = fadeIn(),
+          exit = fadeOut(),
+        ) {
+          StartDialog(
+            onEdit = {
+              directoryViewModel.setDialogState(ServersListDirectoriesViewModel.ManagementDialogState.Edit)
+            },
+            onDelete = {
+              directoryViewModel.setDialogState(ServersListDirectoriesViewModel.ManagementDialogState.ConfirmDelete)
+            })
+        }
+        AnimatedVisibility(
+          dialogState != ServersListDirectoriesViewModel.ManagementDialogState.Start,
+          enter = fadeIn(),
+          exit = fadeOut(),
+        ) {
+          ConfirmDeleteDialog(onDismissRequest, onDeleteConfirm = {
+            directoryViewModel.deleteCurrentDirectory()
+            onDismissRequest()
+          })
+        }
+      }
+
+
+    ServersListDirectoriesViewModel.ManagementDialogState.Edit ->
+      FilePicker(
+        onDismissRequest = {
+          directoryViewModel.setDialogState(ServersListDirectoriesViewModel.ManagementDialogState.Start)
+        },
+        onConfirm = { fileList ->
+          if (fileList.isNotEmpty()) directoryViewModel.updateDirectory(
+            fileList[0]
+          )
+        },
+        filePickerViewModel = viewModel(
+          factory = FilePickerViewModel.Factory,
+          extras = MutableCreationExtras().apply {
+            set(
+              FilePickerViewModel.TARGET_KEY,
+              FilePickerViewModel.Target.Directory
+            )
+          })
+      )
+
+
+    else -> {}
+  }
+}
+
+@Composable
+fun DialogBase(
+  onDismissRequest: () -> Unit,
+  content: @Composable () -> Unit,
 ) {
   Dialog(onDismissRequest = { onDismissRequest() }) {
     Card(
@@ -39,18 +105,8 @@ fun ManageDirectoryDialog(
         .fillMaxWidth()
         .height(200.dp)
         .padding(16.dp),
-      shape = RoundedCornerShape(16.dp),
-    ) {
-      when (state) {
-        ServersListDirectoriesViewModel.ManagementDialogState.Start ->
-          StartDialog(onEdit, onDelete)
-
-        ServersListDirectoriesViewModel.ManagementDialogState.ConfirmDelete ->
-          ConfirmDeleteDialog(onDismissRequest, onDeleteConfirm)
-
-        else -> {}
-      }
-    }
+      shape = RoundedCornerShape(16.dp)
+    ) { content() }
   }
 }
 

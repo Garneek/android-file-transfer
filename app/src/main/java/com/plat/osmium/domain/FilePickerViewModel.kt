@@ -1,7 +1,6 @@
 package com.plat.osmium.domain
 
 import android.os.Build
-import android.os.Environment
 import androidx.annotation.RequiresApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
@@ -14,14 +13,13 @@ import java.io.File
 import kotlin.io.path.fileSize
 import androidx.compose.runtime.collectAsState
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import com.plat.osmium.utils.ProductionDispatcherProvider
-import kotlinx.coroutines.CoroutineScope
+import com.plat.osmium.utils.defaultDir
 import kotlinx.coroutines.launch
 
-private fun defaultDir(): File = File(Environment.getExternalStorageDirectory().absolutePath)
 
 @RequiresApi(Build.VERSION_CODES.O)
 fun getFileSize(file: File): Long = file.toPath().fileSize()
@@ -84,7 +82,7 @@ class FilePickerViewModel(
 
   private fun refreshFileList() {
     if (currentDirectory.value.isDirectory) {
-      CoroutineScope(context = ProductionDispatcherProvider.provideIOContext()).launch {
+      viewModelScope.launch {
         try {
           var files = currentDirectory.value.listFiles()!!.asList()
           if (target == Target.Directory)

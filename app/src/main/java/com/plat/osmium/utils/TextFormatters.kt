@@ -29,3 +29,7 @@ fun fileSizeFormatter(size: Long): String {
     }
   )
 }
+
+fun pathFormatter(path: String): String{
+  return path.removePrefix(defaultDir().path + "/")
+}

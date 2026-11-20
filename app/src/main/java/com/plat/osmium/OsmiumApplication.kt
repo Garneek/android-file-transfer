@@ -6,8 +6,18 @@ import coil3.ImageLoader
 import coil3.SingletonImageLoader
 import coil3.request.crossfade
 import coil3.video.VideoFrameDecoder
+import com.plat.osmium.db.OsmiumDatabase
+import com.plat.osmium.db.OsmiumRepository
+import com.plat.osmium.utils.Common
+
+// TODO:
+// Directories editing menu, pick server
+// Directories add menu
 
 class OsmiumApplication : Application(), SingletonImageLoader.Factory {
+  val database by lazy { OsmiumDatabase.getDatabase(applicationContext) }
+  val repository by lazy { OsmiumRepository(database.directoryDao()) }
+
   override fun newImageLoader(context: Context): ImageLoader {
     return ImageLoader.Builder(context).components {
       add(VideoFrameDecoder.Factory())
@@ -22,6 +32,10 @@ class OsmiumApplication : Application(), SingletonImageLoader.Factory {
         .crossfade(true)
         .build()
     }
+    Common.application = this
+
     super.onCreate()
+
   }
+
 }

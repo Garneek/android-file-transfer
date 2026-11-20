@@ -15,7 +15,7 @@ class PermissionRequester(val requestValues: RequestedValues) {
 
   fun request(): Boolean {
     val granted: List<Boolean> = permissions.map { p ->
-      Common.appContext.checkSelfPermission(p) == PackageManager.PERMISSION_GRANTED
+      Common.application.checkSelfPermission(p) == PackageManager.PERMISSION_GRANTED
     }
 
     val satisfied = granted.fold(false) { ret, v ->

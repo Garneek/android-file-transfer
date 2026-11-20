@@ -33,7 +33,7 @@ fun SectionHeader(
   ) {
     Text(
       text = headerText,
-      style = MaterialTheme.typography.titleLarge,
+      style = MaterialTheme.typography.titleMedium,
       maxLines = 1,
     )
 

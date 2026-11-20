@@ -66,7 +66,13 @@ dependencies {
 
   implementation(libs.androidx.material3)
   implementation(libs.androidx.navigation.compose)
+
+  val room_version = "3.0.3"
+
+  implementation("androidx.room3:room3-runtime:$room_version")
+  ksp("androidx.room3:room3-compiler:$room_version")
   implementation(libs.androidx.room3.common)
+
   implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.11.0")
 
   implementation(platform(libs.androidx.compose.bom))

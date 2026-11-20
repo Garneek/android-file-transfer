@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
 
     <application
+        android:name="com.plat.osmium.OsmiumApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,11 +19,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Osmium">
-        <provider
-            android:name=".utils.ContextProvider"
-            android:authorities="com.demo.user.provider"
-            android:enabled="true"
-            android:exported="false" />
 
         <activity
             android:name=".MainActivity"
