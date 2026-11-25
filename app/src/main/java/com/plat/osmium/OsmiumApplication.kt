@@ -13,10 +13,11 @@ import com.plat.osmium.utils.Common
 // TODO:
 // Directories editing menu, pick server
 // Directories add menu
+// Password input switching keyboard when toggling visibility
 
 class OsmiumApplication : Application(), SingletonImageLoader.Factory {
   val database by lazy { OsmiumDatabase.getDatabase(applicationContext) }
-  val repository by lazy { OsmiumRepository(database.directoryDao()) }
+  val repository by lazy { OsmiumRepository(database.directoryDao(), database.serverDao()) }
 
   override fun newImageLoader(context: Context): ImageLoader {
     return ImageLoader.Builder(context).components {

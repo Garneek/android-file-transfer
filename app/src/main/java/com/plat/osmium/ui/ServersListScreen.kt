@@ -30,15 +30,14 @@ import com.plat.osmium.R
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.plat.osmium.db.Directory
-import com.plat.osmium.domain.RichServer
-import com.plat.osmium.domain.ServersListDirectoriesViewModel
+import com.plat.osmium.db.Server
+import com.plat.osmium.domain.DirectoriesListViewModel
 import com.plat.osmium.domain.ServersListServersViewModel
 import com.plat.osmium.ui.components.ManageDirectoryDialog
 import com.plat.osmium.ui.components.OsmiumTopBar
 import com.plat.osmium.ui.components.SectionHeader
 import com.plat.osmium.ui.components.hapticClick
 import com.plat.osmium.ui.components.hapticConfirm
-import com.plat.osmium.ui.components.hapticLongPress
 import com.plat.osmium.utils.Common
 import com.plat.osmium.utils.defaultDir
 import com.plat.osmium.utils.pathFormatter
@@ -48,10 +47,12 @@ import kotlin.random.Random
 @Composable
 fun ServersListScreen(
   modifier: Modifier = Modifier,
-  serversViewModel: ServersListServersViewModel = viewModel(),
-  directoriesViewModel: ServersListDirectoriesViewModel =
+  serversViewModel: ServersListServersViewModel = viewModel(
+    factory = ServersListServersViewModel.Factory(Common.application.repository)
+  ),
+  directoriesViewModel: DirectoriesListViewModel =
     viewModel(
-      factory = ServersListDirectoriesViewModel.Factory(Common.application.repository)
+      factory = DirectoriesListViewModel.Factory(Common.application.repository)
     ),
   canNavBack: Boolean = true,
   navBack: () -> Unit = {},
@@ -60,12 +61,12 @@ fun ServersListScreen(
   bottomNavbar: @Composable () -> Unit = {},
 ) {
   val dialogState = directoriesViewModel.managementDialog.collectAsState().value
-  if (dialogState != ServersListDirectoriesViewModel.ManagementDialogState.Closed) {
+  if (dialogState != DirectoriesListViewModel.ManagementDialogState.Closed) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
       ManageDirectoryDialog(
         directoriesViewModel,
         onDismissRequest = {
-          directoriesViewModel.setDialogState(ServersListDirectoriesViewModel.ManagementDialogState.Closed)
+          directoriesViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.Closed)
         }
       )
     }
@@ -89,6 +90,8 @@ fun ServersListScreen(
   ) { padding ->
 
     val directories = directoriesViewModel.directories.collectAsState(listOf()).value
+    val servers = serversViewModel.servers.collectAsState(listOf()).value
+
     LazyColumn(
       Modifier
         .padding(padding)
@@ -101,11 +104,11 @@ fun ServersListScreen(
           iconResourceId = R.drawable.icon_add,
         )
       }
-      items(serversViewModel.servers.size, key = { it + 5000 }) { idx ->
+      items(servers.size, key = { it + 5000 }) { idx ->
         ServerListEntry(
-          serversViewModel.servers[idx],
-          onClick = hapticClick { navServer(serversViewModel.servers[idx].serverId) },
-          onLongClick = hapticLongPress { directoriesViewModel.uploadFiles(idx) })
+          servers[idx],
+          onClick = hapticClick { navServer(servers[idx].id) },
+        )
 
         Spacer(Modifier.height(1.dp))
       }
@@ -115,7 +118,13 @@ fun ServersListScreen(
       item(key = 9997) {
         SectionHeader(
           stringResource(R.string.directories_header_text),
-          onIconPress = hapticConfirm {directoriesViewModel.addDirectory(Directory(path = defaultDir().path + "/" + Random.nextInt().toString()))}, // ----------------------------------
+          onIconPress = hapticConfirm {
+            directoriesViewModel.addDirectory(
+              Directory(
+                path = defaultDir().path + "/" + Random.nextInt().toString()
+              )
+            )
+          }, // ----------------------------------
           iconResourceId = R.drawable.icon_add,
         )
       }
@@ -123,7 +132,7 @@ fun ServersListScreen(
         DirectoryListEntry(
           directories[idx],
           onClick = hapticClick {
-            directoriesViewModel.setDialogState(ServersListDirectoriesViewModel.ManagementDialogState.Start)
+            directoriesViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.Start)
             directoriesViewModel.setDialogEntry(directories[idx])
           },
           onUploadClick = hapticConfirm { directoriesViewModel.uploadFiles(idx) })
@@ -135,11 +144,13 @@ fun ServersListScreen(
 
 @Composable
 fun ServerListEntry(
-  serverData: RichServer,
+  serverData: Server,
   onClick: () -> Unit,
-  onLongClick: () -> Unit,
-  modifier: Modifier = Modifier
+  modifier: Modifier = Modifier,
+  onLongClick: () -> Unit = {},
 ) {
+  val isOnline = false
+
   ListItem(
     elevation = ListItemDefaults.elevation(2.dp),
     verticalAlignment = Alignment.CenterVertically,
@@ -148,9 +159,9 @@ fun ServerListEntry(
       .combinedClickable(true, onClick = onClick, onLongClick = onLongClick),
     leadingContent = {
       Icon(
-        painter = painterResource(id = if (serverData.isOnline) R.drawable.icon_link else R.drawable.icon_link_off),
+        painter = painterResource(id = if (isOnline) R.drawable.icon_link else R.drawable.icon_link_off),
         tint = MaterialTheme.colorScheme.primary,
-        contentDescription = stringResource(if (serverData.isOnline) R.string.server_online_desc else R.string.server_offline_desc),
+        contentDescription = stringResource(if (isOnline) R.string.server_online_desc else R.string.server_offline_desc),
       )
     },
     content = {
@@ -162,7 +173,7 @@ fun ServerListEntry(
     },
     supportingContent = {
       Text(
-        if (serverData.isOnline) stringResource(R.string.supporting_server_online) else stringResource(
+        if (isOnline) stringResource(R.string.supporting_server_online) else stringResource(
           R.string.supporting_server_offline
         ),
         maxLines = 1,

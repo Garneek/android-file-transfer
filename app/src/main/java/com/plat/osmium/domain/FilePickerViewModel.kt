@@ -186,16 +186,16 @@ class FilePickerViewModel(
         fileList.value.current().filter { pair -> pair.second }.map { pair -> pair.first }
     }
 
-  companion object {
-    val TARGET_KEY = CreationExtras.Key<Target>()
-
-    val Factory: ViewModelProvider.Factory = viewModelFactory {
-      initializer {
-        val targetArg = (this[TARGET_KEY] as Target)
-        val vm = FilePickerViewModel(target = targetArg)
+  class Factory(private val target: Target) :
+    ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+      if (modelClass.isAssignableFrom(FilePickerViewModel::class.java)) {
+        val vm = FilePickerViewModel(target)
         vm.resetDirectory()
-        vm
+        @Suppress("UNCHECKED_CAST")
+        return vm as T
       }
+      throw IllegalArgumentException("Unknown ViewModel class")
     }
   }
 }

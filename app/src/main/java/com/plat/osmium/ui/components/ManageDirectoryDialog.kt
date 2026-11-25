@@ -11,12 +11,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -26,38 +23,36 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.window.Dialog
-import androidx.lifecycle.viewmodel.MutableCreationExtras
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.plat.osmium.R
 import com.plat.osmium.domain.FilePickerViewModel
-import com.plat.osmium.domain.ServersListDirectoriesViewModel
+import com.plat.osmium.domain.DirectoriesListViewModel
 
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable
 fun ManageDirectoryDialog(
-  directoryViewModel: ServersListDirectoriesViewModel,
+  directoryViewModel: DirectoriesListViewModel,
   onDismissRequest: () -> Unit,
 ) {
   when (val dialogState = directoryViewModel.managementDialog.collectAsState().value) {
-    ServersListDirectoriesViewModel.ManagementDialogState.Start,
-    ServersListDirectoriesViewModel.ManagementDialogState.ConfirmDelete ->
+    DirectoriesListViewModel.ManagementDialogState.Start,
+    DirectoriesListViewModel.ManagementDialogState.ConfirmDelete ->
       DialogBase(onDismissRequest) {
         AnimatedVisibility(
-          dialogState == ServersListDirectoriesViewModel.ManagementDialogState.Start,
+          dialogState == DirectoriesListViewModel.ManagementDialogState.Start,
           enter = fadeIn(),
           exit = fadeOut(),
         ) {
           StartDialog(
             onEdit = {
-              directoryViewModel.setDialogState(ServersListDirectoriesViewModel.ManagementDialogState.Edit)
+              directoryViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.Edit)
             },
             onDelete = {
-              directoryViewModel.setDialogState(ServersListDirectoriesViewModel.ManagementDialogState.ConfirmDelete)
+              directoryViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.ConfirmDelete)
             })
         }
         AnimatedVisibility(
-          dialogState != ServersListDirectoriesViewModel.ManagementDialogState.Start,
+          dialogState != DirectoriesListViewModel.ManagementDialogState.Start,
           enter = fadeIn(),
           exit = fadeOut(),
         ) {
@@ -69,10 +64,10 @@ fun ManageDirectoryDialog(
       }
 
 
-    ServersListDirectoriesViewModel.ManagementDialogState.Edit ->
+    DirectoriesListViewModel.ManagementDialogState.Edit ->
       FilePicker(
         onDismissRequest = {
-          directoryViewModel.setDialogState(ServersListDirectoriesViewModel.ManagementDialogState.Start)
+          directoryViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.Start)
         },
         onConfirm = { fileList ->
           if (fileList.isNotEmpty()) directoryViewModel.updateDirectory(
@@ -80,33 +75,12 @@ fun ManageDirectoryDialog(
           )
         },
         filePickerViewModel = viewModel(
-          factory = FilePickerViewModel.Factory,
-          extras = MutableCreationExtras().apply {
-            set(
-              FilePickerViewModel.TARGET_KEY,
-              FilePickerViewModel.Target.Directory
-            )
-          })
+          factory = FilePickerViewModel.Factory(FilePickerViewModel.Target.Directory)
+        ),
       )
 
 
     else -> {}
-  }
-}
-
-@Composable
-fun DialogBase(
-  onDismissRequest: () -> Unit,
-  content: @Composable () -> Unit,
-) {
-  Dialog(onDismissRequest = { onDismissRequest() }) {
-    Card(
-      modifier = Modifier
-        .fillMaxWidth()
-        .height(200.dp)
-        .padding(16.dp),
-      shape = RoundedCornerShape(16.dp)
-    ) { content() }
   }
 }
 
@@ -161,43 +135,4 @@ private fun ConfirmDeleteDialog(
     }
   }
 }
-
-@Composable
-private fun DialogContent(
-  title: String,
-  text: String,
-  buttons: @Composable () -> Unit,
-) {
-  Column(
-    modifier = Modifier
-      .fillMaxHeight(),
-    verticalArrangement = Arrangement.SpaceBetween
-  ) {
-    Column() {
-      Text(
-        title,
-        style = MaterialTheme.typography.titleLarge,
-        modifier = Modifier.padding(16.dp)
-      )
-
-      Text(
-        text = text,
-        modifier = Modifier
-          .wrapContentSize(Alignment.Center)
-          .padding(horizontal = 16.dp),
-        style = MaterialTheme.typography.bodyMedium,
-      )
-    }
-
-    Row(
-      modifier = Modifier
-        .fillMaxWidth()
-        .padding(horizontal = 8.dp, vertical = 4.dp),
-      horizontalArrangement = Arrangement.End
-    ) {
-      buttons()
-    }
-  }
-}
-
 

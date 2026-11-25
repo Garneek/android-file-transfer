@@ -61,5 +61,18 @@
     <string name="root_directory">Root</string>
     <string name="n_selected">"Selected: "</string>
     <string name="preview_desc">File</string>
+    <string name="add_server_header">Add server\n</string>
+    <string name="add_server_name">Name</string>
+    <string name="clear">Clear</string>
+    <string name="add_server_ip">Host</string>
+    <string name="add_server_port">Port</string>
+    <string name="add_server_password">Password</string>
+    <string name="add_server_directory">Download directory</string>
+    <string name="dialog_error_title">Error</string>
+    <string name="error_port_number">Port must be a number</string>
+    <string name="error_short_server_name">The server name must not be short</string>
+    <string name="error_host_not_valid">Host not valid</string>
+    <string name="error_port_not_valid">Port number not valid</string>
+    <string name="error_directory_doesnt_exist">Chosen directory doesn\'t exist</string>
 
 </resources>

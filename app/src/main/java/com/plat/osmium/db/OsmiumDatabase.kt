@@ -1,13 +1,18 @@
 package com.plat.osmium.db
 
 import android.content.Context
+import androidx.room3.ColumnTypeConverters
 import androidx.room3.Database
 import androidx.room3.Room
 import androidx.room3.RoomDatabase
 
-@Database(entities = [Directory::class], version = 1)
+
+// Remember
+@Database(entities = [Directory::class, Server::class], version = 2)
+@ColumnTypeConverters(Converters::class)
 abstract class OsmiumDatabase : RoomDatabase() {
     abstract fun directoryDao(): DirectoryDao
+    abstract fun serverDao(): ServerDao
 
     companion object {
         @Volatile
