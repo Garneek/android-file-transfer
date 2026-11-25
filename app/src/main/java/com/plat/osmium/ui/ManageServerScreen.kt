@@ -1,8 +1,6 @@
 package com.plat.osmium.ui
 
-import android.app.Dialog
 import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -16,7 +14,6 @@ import androidx.compose.foundation.text.input.TextFieldLineLimits
 import androidx.compose.foundation.text.input.TextFieldState
 import androidx.compose.foundation.text.input.TextObfuscationMode
 import androidx.compose.foundation.text.input.byValue
-import androidx.compose.foundation.text.input.setTextAndPlaceCursorAtEnd
 import androidx.compose.material3.ContainedLoadingIndicator
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.FilledTonalIconButton
@@ -32,7 +29,6 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.scale
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -43,9 +39,9 @@ import com.plat.osmium.R
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.plat.osmium.domain.AddServerViewModel
+import com.plat.osmium.domain.ManageServerViewModel
 import com.plat.osmium.domain.FilePickerViewModel
-import com.plat.osmium.ui.components.DialogBase
+import com.plat.osmium.ui.components.ConfirmDeletionDialog
 import com.plat.osmium.ui.components.ErrorDialog
 import com.plat.osmium.ui.components.FilePicker
 import com.plat.osmium.ui.components.OsmiumTopBar
@@ -54,17 +50,18 @@ import com.plat.osmium.ui.components.hapticConfirm
 import com.plat.osmium.utils.Common
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
-@RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable
-fun AddServerScreen(
+fun ManageServerScreen(
   modifier: Modifier = Modifier,
-  addServerViewModel: AddServerViewModel = viewModel(
-    factory = AddServerViewModel.Factory(Common.application.repository)
+  manageServerViewModel: ManageServerViewModel = viewModel(
+    factory = ManageServerViewModel.Factory(Common.application.repository)
   ),
   canNavBack: Boolean = true,
   navBack: () -> Unit = {},
+  navHome: () -> Unit = {},
   bottomNavbar: @Composable () -> Unit = {},
 ) {
+  val editMode = manageServerViewModel.editMode.collectAsState().value
   val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
   Scaffold(
     modifier
@@ -72,10 +69,20 @@ fun AddServerScreen(
       .nestedScroll(scrollBehavior.nestedScrollConnection), topBar = {
       OsmiumTopBar(
         navBack = navBack,
-        title = stringResource(R.string.add_server_header),
+        title = stringResource(if (editMode) R.string.edit_server_header else R.string.add_server_header),
+        subtitle = if (editMode) manageServerViewModel.startingSubtitle.collectAsState().value else null,
         canNavBack = canNavBack,
         actions = {
-          FilledTonalIconButton(onClick = hapticConfirm { addServerViewModel.save(navBack) }) {
+          if (editMode)
+            IconButton(onClick = hapticClick { manageServerViewModel.askForDeletion() }) {
+              Icon(
+                painter = painterResource(id = R.drawable.icon_delete),
+                tint = MaterialTheme.colorScheme.primary,
+                contentDescription = stringResource(R.string.delete),
+              )
+            }
+
+          FilledTonalIconButton(onClick = hapticConfirm { manageServerViewModel.save(navBack) }) {
             Icon(
               painter = painterResource(id = R.drawable.icon_check),
               tint = MaterialTheme.colorScheme.primary,
@@ -85,21 +92,23 @@ fun AddServerScreen(
         })
     }, bottomBar = bottomNavbar
   ) { padding ->
-    val error = addServerViewModel.error.collectAsState().value
-    if (addServerViewModel.folderPickerOpen.collectAsState().value)
-      FilePicker(
-        onDismissRequest = {
-          addServerViewModel.closeFolderPicker()
-        },
-        onConfirm = { fileList ->
-          if (fileList.isNotEmpty())
-            addServerViewModel.setDirPath(fileList[0].path)
-        },
-        filePickerViewModel = viewModel(
-          factory = FilePickerViewModel.Factory(FilePickerViewModel.Target.Directory)
+    val error = manageServerViewModel.error.collectAsState().value
+    if (manageServerViewModel.folderPickerOpen.collectAsState().value) {
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        FilePicker(
+          onDismissRequest = {
+            manageServerViewModel.closeFolderPicker()
+          },
+          onConfirm = { fileList ->
+            if (fileList.isNotEmpty())
+              manageServerViewModel.setDirPath(fileList[0].path)
+          },
+          filePickerViewModel = viewModel(
+            factory = FilePickerViewModel.Factory(FilePickerViewModel.Target.Directory)
+          )
         )
-      )
-    else if (addServerViewModel.saving.collectAsState().value)
+      }
+    } else if (manageServerViewModel.saving.collectAsState().value)
       Dialog(onDismissRequest = {}) {
         ContainedLoadingIndicator(
           modifier = Modifier
@@ -107,74 +116,83 @@ fun AddServerScreen(
             .height(128.dp)
         )
       }
-    else if (error != null)
-      ErrorDialog(onDismissRequest = { addServerViewModel.resetError() }, stringResource(error))
+    else {
+      if (error != null)
+        ErrorDialog(onDismissRequest = { manageServerViewModel.resetError() }, stringResource(error))
+      else if (manageServerViewModel.deleteConfirm.collectAsState().value) {
+        ConfirmDeletionDialog(
+          onDismissRequest = { manageServerViewModel.cancelDeletion() },
+          onConfirmDelete = { manageServerViewModel.delete(navHome) },
+          title = stringResource(R.string.dialog_delete_confirm_title),
+          text = stringResource(R.string.dialog_delete_confirm_text),
+        )
+      }
+      LazyColumn(
+        Modifier
+          .padding(padding)
+          .padding(vertical = 4.dp, horizontal = 32.dp)
+      ) {
+        item {
+          EditTextField(
+            manageServerViewModel.nameTfState,
+            stringResource(R.string.add_server_name),
+            onClear = { manageServerViewModel.clearName() },
+            modifier = Modifier.padding(top = 16.dp)
+          )
+        }
+        item {
+          EditTextField(
+            manageServerViewModel.ipTfState,
+            stringResource(R.string.add_server_ip),
+            onClear = { manageServerViewModel.clearIp() },
+            keyboardType = KeyboardType.Uri
+          )
+        }
+        item {
+          EditTextField(
+            manageServerViewModel.portTfState,
+            stringResource(R.string.add_server_port),
+            onClear = { manageServerViewModel.clearPort() },
+            keyboardType = KeyboardType.Number
+          )
+        }
+        item {
+          SecureEditTextField(
+            manageServerViewModel.passwordTfState,
+            stringResource(R.string.add_server_password),
+            onClear = { manageServerViewModel.clearPassword() },
+            last = true,
+            passwordHidden = manageServerViewModel.passwordHidden.collectAsState().value,
+            swapPasswordHidden = { manageServerViewModel.swapHiddenState() }
+          )
+        }
 
-    LazyColumn(
-      Modifier
-        .padding(padding)
-        .padding(vertical = 4.dp, horizontal = 32.dp)
-    ) {
-      item {
-        EditTextField(
-          addServerViewModel.nameTfState,
-          stringResource(R.string.add_server_name),
-          onClear = { addServerViewModel.clearName() },
-          modifier = Modifier.padding(top = 16.dp)
-        )
-      }
-      item {
-        EditTextField(
-          addServerViewModel.ipTfState,
-          stringResource(R.string.add_server_ip),
-          onClear = { addServerViewModel.clearIp() },
-          keyboardType = KeyboardType.Uri
-        )
-      }
-      item {
-        EditTextField(
-          addServerViewModel.portTfState,
-          stringResource(R.string.add_server_port),
-          onClear = { addServerViewModel.clearPort() },
-          keyboardType = KeyboardType.Number
-        )
-      }
-      item {
-        SecureEditTextField(
-          addServerViewModel.passwordTfState,
-          stringResource(R.string.add_server_password),
-          onClear = { addServerViewModel.clearPassword() },
-          last = true,
-          passwordHidden = addServerViewModel.passwordHidden.collectAsState().value,
-          swapPasswordHidden = { addServerViewModel.swapHiddenState() }
-        )
-      }
-
-      item {
-        OutlinedTextField(
-          modifier = modifier
-            .fillMaxWidth()
-            .padding(bottom = 16.dp),
-          readOnly = true,
-          state = addServerViewModel.directoryTfState,
-          label = { Text(stringResource(R.string.add_server_directory)) },
-          trailingIcon = {
-            IconButton(onClick = {
-              addServerViewModel.openFolderPicker()
-            }) {
-              Icon(
-                painter = painterResource(id = R.drawable.icon_edit),
-                tint = MaterialTheme.colorScheme.primary,
-                contentDescription = stringResource(R.string.edit),
-              )
-            }
-          },
-          shape = OutlinedTextFieldDefaults.roundedShape,
-          lineLimits = TextFieldLineLimits.SingleLine
-        )
-
+        item {
+          OutlinedTextField(
+            modifier = modifier
+              .fillMaxWidth()
+              .padding(bottom = 16.dp),
+            readOnly = true,
+            state = manageServerViewModel.directoryTfState,
+            label = { Text(stringResource(R.string.add_server_directory)) },
+            trailingIcon = {
+              IconButton(onClick = {
+                manageServerViewModel.openFolderPicker()
+              }) {
+                Icon(
+                  painter = painterResource(id = R.drawable.icon_edit),
+                  tint = MaterialTheme.colorScheme.primary,
+                  contentDescription = stringResource(R.string.edit),
+                )
+              }
+            },
+            shape = OutlinedTextFieldDefaults.roundedShape,
+            lineLimits = TextFieldLineLimits.SingleLine
+          )
+        }
       }
     }
+
   }
 }
 

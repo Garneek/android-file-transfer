@@ -14,6 +14,7 @@ import com.plat.osmium.utils.Common
 // Directories editing menu, pick server
 // Directories add menu
 // Password input switching keyboard when toggling visibility
+// Nav animations
 
 class OsmiumApplication : Application(), SingletonImageLoader.Factory {
   val database by lazy { OsmiumDatabase.getDatabase(applicationContext) }

@@ -35,49 +35,51 @@ fun ManageDirectoryDialog(
   onDismissRequest: () -> Unit,
 ) {
   when (val dialogState = directoryViewModel.managementDialog.collectAsState().value) {
-    DirectoriesListViewModel.ManagementDialogState.Start,
-    DirectoriesListViewModel.ManagementDialogState.ConfirmDelete ->
-      DialogBase(onDismissRequest) {
-        AnimatedVisibility(
-          dialogState == DirectoriesListViewModel.ManagementDialogState.Start,
-          enter = fadeIn(),
-          exit = fadeOut(),
-        ) {
-          StartDialog(
-            onEdit = {
-              directoryViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.Edit)
-            },
-            onDelete = {
-              directoryViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.ConfirmDelete)
-            })
-        }
-        AnimatedVisibility(
-          dialogState != DirectoriesListViewModel.ManagementDialogState.Start,
-          enter = fadeIn(),
-          exit = fadeOut(),
-        ) {
-          ConfirmDeleteDialog(onDismissRequest, onDeleteConfirm = {
+    DirectoriesListViewModel.ManagementDialogState.Start, DirectoriesListViewModel.ManagementDialogState.ConfirmDelete -> DialogBase(
+      onDismissRequest
+    ) {
+      AnimatedVisibility(
+        dialogState == DirectoriesListViewModel.ManagementDialogState.Start,
+        enter = fadeIn(),
+        exit = fadeOut(),
+      ) {
+        StartDialog(onEdit = {
+          directoryViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.Edit)
+        }, onDelete = {
+          directoryViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.ConfirmDelete)
+        })
+      }
+      AnimatedVisibility(
+        dialogState != DirectoriesListViewModel.ManagementDialogState.Start,
+        enter = fadeIn(),
+        exit = fadeOut(),
+      ) {
+        ConfirmDeletionDialog(
+          onDismissRequest,
+          onConfirmDelete = {
             directoryViewModel.deleteCurrentDirectory()
             onDismissRequest()
-          })
-        }
-      }
-
-
-    DirectoriesListViewModel.ManagementDialogState.Edit ->
-      FilePicker(
-        onDismissRequest = {
-          directoryViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.Start)
-        },
-        onConfirm = { fileList ->
-          if (fileList.isNotEmpty()) directoryViewModel.updateDirectory(
-            fileList[0]
+          },
+          title = stringResource(R.string.popup_dir_confirm_delete_title),
+          text = stringResource(R.string.popup_dir_confirm_delete_text),
           )
-        },
-        filePickerViewModel = viewModel(
-          factory = FilePickerViewModel.Factory(FilePickerViewModel.Target.Directory)
-        ),
-      )
+      }
+    }
+
+
+    DirectoriesListViewModel.ManagementDialogState.Edit -> FilePicker(
+      onDismissRequest = {
+        directoryViewModel.setDialogState(DirectoriesListViewModel.ManagementDialogState.Start)
+      },
+      onConfirm = { fileList ->
+        if (fileList.isNotEmpty()) directoryViewModel.updateDirectory(
+          fileList[0]
+        )
+      },
+      filePickerViewModel = viewModel(
+        factory = FilePickerViewModel.Factory(FilePickerViewModel.Target.Directory)
+      ),
+    )
 
 
     else -> {}
@@ -95,42 +97,13 @@ private fun StartDialog(
   ) {
     TextButton(onClick = hapticClick(onEdit)) {
       Text(
-        stringResource(R.string.edit),
-        color = MaterialTheme.colorScheme.secondary,
-        maxLines = 1
+        stringResource(R.string.edit), color = MaterialTheme.colorScheme.secondary, maxLines = 1
       )
     }
     Spacer(Modifier.width(16.dp))
     TextButton(onClick = hapticClick(onDelete)) {
       Text(
-        stringResource(R.string.delete),
-        maxLines = 1
-      )
-    }
-  }
-}
-
-@Composable
-private fun ConfirmDeleteDialog(
-  onDismissRequest: () -> Unit = {},
-  onDeleteConfirm: () -> Unit = {},
-) {
-  DialogContent(
-    stringResource(R.string.popup_dir_confirm_delete_title),
-    stringResource(R.string.popup_dir_confirm_delete_text),
-  ) {
-    TextButton(onClick = hapticClick(onDismissRequest)) {
-      Text(
-        stringResource(R.string.cancel),
-        color = MaterialTheme.colorScheme.secondary,
-        maxLines = 1
-      )
-    }
-    Spacer(Modifier.width(16.dp))
-    TextButton(onClick = hapticConfirm(onDeleteConfirm)) {
-      Text(
-        stringResource(R.string.delete),
-        maxLines = 1
+        stringResource(R.string.delete), maxLines = 1
       )
     }
   }

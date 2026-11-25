@@ -39,4 +39,10 @@ class OsmiumRepository(
   suspend fun deleteServer(server: Server) {
     serverDao.delete(server)
   }
+
+  @WorkerThread
+  suspend fun serverById(id: Int): Server? = serverDao.byId(id)
+
+  @WorkerThread
+  fun flowServerById(id: Int): Flow<Server?> = serverDao.flowById(id)
 }

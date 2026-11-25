@@ -3,10 +3,12 @@ package com.plat.osmium.ui.components
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -86,6 +88,36 @@ fun ErrorDialog(
       TextButton(onClick = hapticConfirm(onDismissRequest)) {
         Text(
           stringResource(R.string.confirm),
+          maxLines = 1
+        )
+      }
+    }
+  }
+}
+
+@Composable
+fun ConfirmDeletionDialog(
+  onDismissRequest: () -> Unit,
+  onConfirmDelete: () -> Unit,
+  title: String,
+  text: String,
+) {
+  DialogBase(onDismissRequest = onDismissRequest) {
+    DialogContent(
+      title = title,
+      text = text,
+    ) {
+      TextButton(onClick = hapticClick(onDismissRequest)) {
+        Text(
+          stringResource(R.string.cancel),
+          color = MaterialTheme.colorScheme.secondary,
+          maxLines = 1
+        )
+      }
+      Spacer(Modifier.width(16.dp))
+      TextButton(onClick = hapticConfirm (onConfirmDelete)) {
+        Text(
+          stringResource(R.string.delete),
           maxLines = 1
         )
       }

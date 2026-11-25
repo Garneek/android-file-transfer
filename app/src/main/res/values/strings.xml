@@ -35,7 +35,7 @@
     <string name="server_online_desc">Server is Online</string>
     <string name="server_offline_desc">Server is Offline</string>
     <string name="directory_icon_desc">Directory</string>
-    <string name="upload_icon_desc">Upload Files From Directory</string>
+    <string name="upload_icon_desc">Upload Files</string>
 
 
     <string name="default_icon_button_description">No Description Added</string>
@@ -61,7 +61,7 @@
     <string name="root_directory">Root</string>
     <string name="n_selected">"Selected: "</string>
     <string name="preview_desc">File</string>
-    <string name="add_server_header">Add server\n</string>
+    <string name="add_server_header">Add server</string>
     <string name="add_server_name">Name</string>
     <string name="clear">Clear</string>
     <string name="add_server_ip">Host</string>
@@ -74,5 +74,10 @@
     <string name="error_host_not_valid">Host not valid</string>
     <string name="error_port_not_valid">Port number not valid</string>
     <string name="error_directory_doesnt_exist">Chosen directory doesn\'t exist</string>
+    <string name="error_no_server_chosen">No server chosen. Contact the development team</string>
+    <string name="server_settings">Server Settings</string>
+    <string name="edit_server_header">Edit server</string>
+    <string name="dialog_delete_confirm_title">Confirm deletion</string>
+    <string name="dialog_delete_confirm_text">You are about to delete the server data. Please confirm</string>
 
 </resources>

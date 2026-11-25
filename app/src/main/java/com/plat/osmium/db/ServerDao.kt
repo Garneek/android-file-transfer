@@ -17,7 +17,10 @@ interface ServerDao {
   suspend fun getAllNow(): List<Server>
 
   @Query("SELECT * FROM server WHERE id = :serverId")
-  fun byId(serverId: Int): Flow<Server?>
+  suspend fun byId(serverId: Int): Server?
+
+  @Query("SELECT * FROM server WHERE id = :serverId")
+   fun flowById(serverId: Int): Flow<Server?>
 
   @Update
   suspend fun update(server: Server)
@@ -27,5 +30,4 @@ interface ServerDao {
 
   @Delete
   suspend fun delete(server: Server)
-
 }
