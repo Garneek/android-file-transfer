@@ -48,4 +48,7 @@ Ustawienia globalne
 
 ![Settings view](resources/mockup/Settings%20view.png)
 
-[Link do projektu w Figmie](https://www.figma.com/design/srLpykh4LJWcoB33OThP62/Osmium-mockup-1)
+[Kod źródłowy](app/src/main/java/com/plat/osmium)
+[Model danych](DATA.md)
+[Projekt w Figmie](https://www.figma.com/design/srLpykh4LJWcoB33OThP62/Osmium-mockup-1)
+[Screenshoty mockupów](resources/mockup)
