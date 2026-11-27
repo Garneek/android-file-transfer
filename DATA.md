@@ -21,7 +21,7 @@ Dane programu działającego na innym urządzeniu.
 | name | `string` |  | Nazwa serwera |
 | host | `string` |  | Ip / url serwera |
 | port | `int` |  | Port serwera |
-| password | `string` | Null | Hasło serwera; Jeśli null używa wartości z DataStore |
+| password | `string` |  | Hasło serwera; Jeśli null używa wartości z DataStore |
 | directory | `string` | Null | Katalog do którego pobierane są pliki; Jeśli null używa wartości z DataStore |
 | accepts_uploads | `boolean` |  | Czy serwer przyjmuje uploadowane pliki |
 | last_sync | `datetime` |  | Czas ostatniej synchronizacji |
